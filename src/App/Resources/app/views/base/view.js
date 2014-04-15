@@ -6,8 +6,13 @@ define([ 'underscore', 'chaplin', 'app/globals', 'app/lib/utils', 'app/lib/view-
 		getTemplateData: function () {
 			var model = Chaplin.View.prototype.getTemplateData.apply(this, arguments);
 
+			var globalFunc = {
+				app: Globals,
+				asset: function() { return '/' + arguments[0] },
+				path: utils.redirectTo
+			};
 			return _.extend(
-				{ 'path': utils.redirectTo, app: Globals },
+				globalFunc,
 				this.templateData,
 				{ model: model, collection: model }
 			);

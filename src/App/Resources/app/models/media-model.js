@@ -31,7 +31,8 @@ define([ 'app/lib/utils', 'app/models/base/model' ], function (utils, BaseModel)
 
 //				image.crossOrigin = '';
 //			    try {
-				image.src = this.get('images').standard_resolution.url.replace('http://', 'http://www.corsproxy.com/');
+				var timestamp = Date.now();;
+				image.src = this.get('images').standard_resolution.url.replace('http://', 'http://www.corsproxy.com/') + '?' + timestamp;
 //			    } catch (e) {
 //				    me.trigger('loadError', image);
 //				    image = image.onload = image.onerror = null;

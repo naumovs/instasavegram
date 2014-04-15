@@ -6,6 +6,7 @@ define([ 'app/views/base/view', 'app/views/base/collection-view' ], function(Bas
 	});
 
 	return BaseCollectionView.extend({
+		className: 'row',
 		container: '#content .media-view',
 		autoRender: true,
 		itemView:   itemView

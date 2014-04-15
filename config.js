@@ -57,8 +57,9 @@ exports.config = {
 			return path.replace(/^web\//, '');
 		}
 	},
-
-
+	conventions: {
+		ignored: /bootstrap-sass/
+	},
 // Change this if you're using something other than backbone (e.g. 'ember').
 // Content of files, generated with `brunch generate` depends on the setting.
 	framework: 'backbone'

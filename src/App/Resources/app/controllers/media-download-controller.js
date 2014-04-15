@@ -5,7 +5,8 @@ define([
 	'app/models/media-collection',
 	'app/views/media-download-view',
 	'jszip',
-	'filesaver'
+	'filesaver',
+	'bootstrap/modal'
 ], function ($, BaseController, mediaCache, MediaCollection, MediaDownloadView, JSZip, saveAs) {
 
 	return BaseController.extend({
@@ -91,6 +92,7 @@ define([
 
 						ctx.drawImage(image, 0, 0);
 
+						console.log(image.src);
 						dataUrl = canvas.toDataURL("image/jpeg");
 
 						if (dataUrl.indexOf('image/jpeg') != 5) {
