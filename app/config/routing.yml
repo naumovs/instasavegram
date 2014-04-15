@@ -1,0 +1,7 @@
+egonyan_js_routing:
+    resource: "@EgonyanJsRoutingBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@App/Resources/config/routing.yml"
+    type:     "rad_convention"

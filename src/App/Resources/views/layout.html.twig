@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block subtitle %}{% endblock %} Cloudpass</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    {#<link rel="stylesheet" href="{{ asset('vendor/bower_components/pure/pure.css') }}">#}
+    {#<link rel="stylesheet" href="{{ asset('vendor/bower_components/font-awesome/css/font-awesome.css') }}">#}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+    {#{% stylesheets 'css/site.css' %}#}
+    {#<link rel="stylesheet" href="{{ asset_url }}">#}
+    {#{% endstylesheets %}#}
+
+    {% if ga_tracking is not empty -%}
+        <script>
+            (function (a, b, c, d, e, f) {
+                a.GoogleAnalyticsObject = d;
+                a[d] || (a[d] =
+                        function () {
+                            (a[d].q = a[d].q || []).push(arguments)
+                        });
+                a[d].l = +new Date;
+                e = b.createElement(c);
+                f = b.getElementsByTagName(c)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                f.parentNode.insertBefore(e, f)
+            }(window, document, 'script', 'ga'));
+            ga('create', '{{ ga_tracking }}');
+            ga('send', 'pageview');
+        </script>
+    {%- endif %}
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid navbar-static-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="{{ path('homepage') }}">The ID</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ path('homepage') }}">help us improve</a></li>
+                <li><a href="{{ path('homepage') }}">contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% set payload = block('payload') %}
+    {% if payload is not empty %}
+        <div id="payload">{% block payload %}{% endblock %}</div>
+    {% endif %}
+
+    <div class="footer row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="footer-text">
+                <div class=" col-sm-6">
+                    <a href="{{ path('homepage') }}" class="footer_txt">about us</a>
+                    <a href="{{ path('homepage') }}" class="footer_txt">help</a>
+                    <a href="{{ path('homepage') }}" class="footer_txt">policy</a>
+                </div>
+                        <span class="footer-credits col-sm-6">created by
+                            <a href="http://instagram.com/egonyan">@egonyan</a> and
+                            <a href="http://instagram.com/zlayatapka">@zlayatapka</a>
+                        </span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var curl = {
+        baseUrl: "/",
+        pluginPath: "vendor/bower_components/curl/src/curl/plugin",
+        paths: {
+            'app/globals': "{{ path('_appGlobals') }}",
+            'js/server-routes': "{{ path('egonyan_js_routing') }}?amd",
+            jquery: "vendor/bower_components/jquery/dist/jquery",
+            underscore: "vendor/bower_components/lodash/dist/lodash",
+            backbone: "vendor/bower_components/exoskeleton/exoskeleton",
+            chaplin: "vendor/bower_components/chaplin/chaplin",
+            nunjucks: "vendor/bower_components/nunjucks/browser/nunjucks.js",
+            blob: {
+                location: 'vendor/bower_components/blob/Blob.js',
+                config: { loader: 'curl/loader/legacy', exports: 'Blob' }
+            },
+            filesaver: {
+                location: 'vendor/bower_components/FileSaver/FileSaver.js',
+                config: { loader: 'curl/loader/legacy', exports: 'saveAs', requires: ['blob'] }
+            },
+            'canvas.toBlob': {
+                location: 'vendor/bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.min.js',
+                config: { loader: 'curl/loader/legacy', requires: ['blob'] }
+            },
+            'jszip': {
+                location: 'vendor/bower_components/jszip/dist/jszip.js',
+                config: { exports: 'JSZip', requires: ['blob', 'filesaver'] }
+            }
+
+        },
+        packages: {
+            bootstrap: {
+                location: 'vendor/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/',
+                main: '../bootstrap.js',
+                config: { loader: 'curl/loader/legacy', requires: ['jquery'], exports: '$' }
+            },
+            curl: { location: 'vendor/bower_components/curl/src/curl/' },
+            app: { location: 'app', main: 'application' }
+        }
+        {#{% if app.debug %}, preloads: ["curl/debug"]{% endif %}#}
+    };
+</script>
+<script type="text/javascript" src="{{ asset('vendor/bower_components/curl/src/curl.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+{% block javascripts %}
+{% endblock %}
+<script type="text/javascript">
+    require = curl;
+    curl(['app/globals', 'app/lib/utils', 'app/application', 'app/routes', 'bootstrap/dropdown', 'bootstrap/collapse']).then(function (Globals, Utils, Application, routes) {
+//        var silent = !document.getElementById('payload');
+
+
+        Globals['app'] = new Application({
+            title: 'The ID',
+            routes: routes,
+            controllerPath: 'app/controllers/',
+            controllerSuffix: '-controller',
+            root: Globals['base-url']
+//            silent: silent
+        });
+
+    });
+
+</script>
+</body>
+</html>

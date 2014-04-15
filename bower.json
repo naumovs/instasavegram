@@ -1,0 +1,58 @@
+{
+  "name": "Symfony-Chaplin app",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "lodash": "*",
+    "exoskeleton": "*",
+    "chaplin": "*",
+    "curl": "*",
+    "console-polyfill": "*",
+    "nunjucks": "*",
+    "pure": "~0.4.2",
+    "font-awesome": "~4.0.3",
+    "backbone.dropboxDatastore": "~0.5.0",
+    "blob": "*",
+    "blueimp-canvas-to-blob": "~2.1.0",
+    "FileSaver": "*",
+    "jszip": "git://github.com/Stuk/jszip.git",
+    "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git"
+  },
+  "overrides": {
+    "chaplin": {
+      "dependencies": {
+        "exoskeleton": "*"
+      }
+    },
+    "lodash": {
+      "main": "dist/lodash.js"
+    },
+    "font-awesome": {
+      "main": "css/font-awesome.css"
+    },
+    "backbone.dropboxDatastore": {
+      "dependencies": {
+        "exoskeleton": "*"
+      },
+      "devDependencies": {
+        "lodash": "*"
+      }
+    }
+  },
+  "private": true,
+  "authors": [
+    "sergey <sergey@wikia-inc.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/vendor",
+    "test",
+    "tests"
+  ]
+}
