@@ -71,7 +71,7 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url":  "git@github.com:egonyan/EgoJsRoutingBundle.git"
+			"url":  "git@github.com:naumovs/EgoJsRoutingBundle.git"
 		}
 	]
 

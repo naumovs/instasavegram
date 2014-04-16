@@ -26,13 +26,15 @@ class CommonController extends Controller
 			'data' => array(
 				'debug' => $this->getParameter('kernel.debug'),
 				'base-url' => $request->getBaseUrl() . '/',
-				'dropbox-key' => $this->getParameter('dropbox_key')
+				'instagram-client-id' => $this->getParameter('instagram_client_id')
 			)), $response);
 	}
 
 	public function homepageAction()
 	{
-		return array();
+		return array(
+			'instagram_client_id' => $this->getParameter('instagram_client_id')
+		);
 	}
 
 	public function profileAction()
