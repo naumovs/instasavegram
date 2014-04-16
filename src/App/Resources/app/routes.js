@@ -9,6 +9,10 @@ define( [ 'app/symfony-router' ], function (SymfonyRouter) {
 		var name;
 		// TODO: specify controller and action via params on server side
 
+		match(route('homepage'), 'homepage#show', {
+			name: 'homepage'
+		});
+
 		match(route('profile'), 'profile#show', {
 			name: 'profile'
 		});
