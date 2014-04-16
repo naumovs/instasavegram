@@ -9,7 +9,7 @@
 /vendor/
 /bin/
 /composer.phar
-/web/app/
+/web/app
 /web/js/
 /web/css/
 /web/vendor/
