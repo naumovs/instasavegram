@@ -1,4 +1,4 @@
-define(['chaplin', 'app/controllers/session-controller'], function(Chaplin, SessionController) {
+define(['chaplin', 'app/controllers/session-controller', 'app/controllers/menu-controller'], function(Chaplin, SessionController, MenuController) {
   'use strict';
 
   // The application object
@@ -16,7 +16,7 @@ define(['chaplin', 'app/controllers/session-controller'], function(Chaplin, Sess
 	  },
 	  initControllers: function() {
 		  Chaplin.mediator.sessionController = new SessionController();
-
+			new MenuController();
 		  // init parent controllers
 //			Chaplin.Application.prototype.initControllers.apply(this, arguments);
 	  },

@@ -27,6 +27,8 @@ define([
 				}
 			});
 
+			Chaplin.mediator.setHandler('session.logout', this.logout.bind(this));
+
 			this.on('foundToken', this.validateToken);
 			this.on('failed', this.hopProvider);
 
@@ -87,6 +89,12 @@ define([
 			this.writeCookie('instaAT', accessToken, 1);
 
 			this.publishEvent('session.changed', true, user, accessToken, provider);
+		},
+		logout: function() {
+			this.writeCookie('instaAT', '', -1);
+			Chaplin.mediator.user = null;
+			Chaplin.mediator.accessToken = null;
+			this.publishEvent('session.changed', false);
 		}
 	});
 

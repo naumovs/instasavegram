@@ -1,11 +1,12 @@
 define([
 	'require',
 	'jquery',
+	'app/lib/utils',
 	'app/views/base/view',
 	'app/models/media-cache',
 	'app/models/media-collection',
 	'app/views/profile-media-view'
-], function (require, $, BaseView, mediaCache, MediaCollection, ProfileMediaView, JSZip, saveAs, modal) {
+], function (require, $, utils, BaseView, mediaCache, MediaCollection, ProfileMediaView, JSZip, saveAs, modal) {
 
 	var profileMediaView = null;
 
@@ -27,10 +28,12 @@ define([
 				return this.render();
 			}
 
-			this.subscribeEvent('session.changed', (function (authenticated, user, accessToken, provider) {
+			this.subscribeEvent('session.changed', (function (authenticated, user) {
 				if (authenticated) {
 					this.model = user;
 					this.render();
+				} else {
+					utils.redirectTo('homepage');
 				}
 			}).bind(this));
 		},
