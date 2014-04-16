@@ -6,6 +6,11 @@ define([
 
     return BaseController.extend({
 		show: function() {
+
+			if (!Chaplin.mediator.user || !Chaplin.mediator.user.get('authenticated')) {
+				return this.redirectTo('homepage');
+			}
+
             this.view = new ProfileView({
 	            model: Chaplin.mediator.user
             });

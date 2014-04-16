@@ -10,6 +10,7 @@ define([
 			BaseController.prototype.initialize.apply(this, arguments);
 
 			this.subscribeEvent('session.changed', function (authenticated, user) {
+
 				if (authenticated) {
 					me.view = new NavProfileView({
 						model: user
@@ -19,6 +20,8 @@ define([
 						me.view.dispose();
 						me.view = null;
 					}
+
+					this.redirectTo('homepage');
 				}
 			});
 
