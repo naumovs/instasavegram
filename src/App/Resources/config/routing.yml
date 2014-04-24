@@ -12,6 +12,10 @@ imageProxy:
     pattern: /proxy
     defaults: { _controller: App:Common:imageProxy }
 
+trackEvent:
+    pattern: /trackEvent
+    defaults: { _controller: App:Common:trackEvent }
+
 _appGlobals:
     pattern: /app/globals.js
     defaults: { _controller: App:Common:appGlobals }

@@ -18,7 +18,7 @@ define([
 		container: '#content',
 		containerMethod: 'html',
 		model: null,
-		template: 'profile.html',
+		template: 'profile-view.html',
 		className: 'profile',
 		autoRender: false,
 		initialize: function () {

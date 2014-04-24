@@ -2,10 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use App\Entity\TrackEvent;
+use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class CommonController extends Controller
 {
@@ -88,4 +88,17 @@ class CommonController extends Controller
 
 	}
 
+	public function trackEventAction() {
+
+		$event = new TrackEvent();
+
+		/** @var Form $form */
+		$form = $this->createBoundObjectForm($event, 'new');
+
+		if ($form->isValid()) {
+			$this->persist($event, true);
+		}
+
+		return new Response();
+	}
 } 

@@ -1,5 +1,6 @@
 define([
 	'jquery',
+	'chaplin',
 	'./base/controller',
 	'app/models/media-cache',
 	'app/models/media-collection',
@@ -7,7 +8,7 @@ define([
 	'jszip',
 	'filesaver',
 	'bootstrap/modal'
-], function ($, BaseController, mediaCache, MediaCollection, MediaDownloadView, JSZip, saveAs) {
+], function ($, Chaplin, BaseController, mediaCache, MediaCollection, MediaDownloadView, JSZip, saveAs) {
 
 	return BaseController.extend({
 		initialize: function () {
@@ -46,6 +47,7 @@ define([
 
 				if (this.models.length == 0) {
 					downloadZip();
+
 				}
 			});
 
@@ -57,8 +59,11 @@ define([
 			function downloadZip() {
 				console.log('downloading zip')
 				var blob = zip.generate({type: "blob"});
-					saveAs(blob, 'photos.zip');
+
+				saveAs(blob, 'photos.zip');
 				me.view.$el.modal('hide');
+				Chaplin.mediator.trackerController.trackEventLocal('zip', 'download', '1');
+				Chaplin.mediator.trackerController.trackEventLocal('photos', 'download', count);
 
 				setTimeout(function(){
 					me.dispose();

@@ -1,4 +1,9 @@
-define(['chaplin', 'app/controllers/session-controller', 'app/controllers/menu-controller'], function(Chaplin, SessionController, MenuController) {
+define([
+	'chaplin',
+	'app/controllers/session-controller',
+	'app/controllers/menu-controller',
+	'app/controllers/tracker-controller',
+], function(Chaplin, SessionController, MenuController, TrackerController) {
   'use strict';
 
   // The application object
@@ -11,11 +16,13 @@ define(['chaplin', 'app/controllers/session-controller', 'app/controllers/menu-c
 		  Chaplin.mediator.accessToken = null;
 		  Chaplin.mediator.user = null;
 		  Chaplin.mediator.sessionController = null;
+		  Chaplin.mediator.trackerController = null;
 		  // seal mediator after
 		  Chaplin.Application.prototype.initMediator.apply(this, arguments);
 	  },
 	  initControllers: function() {
 		  Chaplin.mediator.sessionController = new SessionController();
+		  Chaplin.mediator.trackerController = new TrackerController();
 			new MenuController();
 		  // init parent controllers
 //			Chaplin.Application.prototype.initControllers.apply(this, arguments);
