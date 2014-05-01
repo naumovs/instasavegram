@@ -1,13 +1,16 @@
 /* global window */
 define([
+	'backbone',
 	'jquery',
+	'app/globals',
 	'app/lib/utils',
 	'./base/controller',
-], function ($, utils, BaseController) {
+], function (Backbone, $, Globals, utils, BaseController) {
 	return BaseController.extend({
-//		initialize: function () {
-//			BaseController.prototype.initialize.apply(this, arguments);
-//		},
+		initialize: function () {
+			BaseController.prototype.initialize.apply(this, arguments);
+			this.subscribeEvent('router:match', this.trackPageView);
+		},
 		trackEventLocal: function(category, action, value) {
 			$.ajax(utils.reverse('trackEvent'), {
 				type: 'post',
@@ -17,6 +20,11 @@ define([
 					'form[value]': value
 				}
 			});
+		},
+		trackPageView: function(route, actionParams, options) {
+			if (options && options.changeURL && window._gaq) {
+				window._gaq.push([ '_trackPageview', '/' + route.path ]);
+			}
 		}
 	});
 

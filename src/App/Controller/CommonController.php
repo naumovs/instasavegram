@@ -34,7 +34,8 @@ class CommonController extends Controller
 	public function homepageAction()
 	{
 		return array(
-			'instagram_client_id' => $this->getParameter('instagram_client_id')
+			'instagram_client_id' => $this->getParameter('instagram_client_id'),
+			'ga_tracking' => $this->getParameter('ga_tracking')
 		);
 	}
 
