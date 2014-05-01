@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\TrackEvent;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -88,17 +89,39 @@ class CommonController extends Controller
 
 	}
 
-	public function trackEventAction() {
+	public function trackEventAction(Request $request) {
 
 		$event = new TrackEvent();
 
 		/** @var Form $form */
-		$form = $this->createBoundObjectForm($event, 'new');
+		$form = $this->createFormBuilder($event, [ 'csrf_protection' => false ])
+			->add('category', 'text')
+			->add('action', 'text')
+			->add('value', 'number')
+			->getForm();
+
+		$form->handleRequest($request);
 
 		if ($form->isValid()) {
 			$this->persist($event, true);
+			$this->addFlash('success');
+
 		}
 
 		return new Response();
+	}
+
+	public function imagesCountTextAction() {
+
+		/** @var QueryBuilder $qb */
+		$qb = $this->getRepository('App:TrackEvent')
+			->createQueryBuilder('te');
+
+		$value = $qb->select('SUM(te.value) as value')
+			->getQuery()->getSingleScalarResult();
+
+		return $this->render('App:Common:imagesCountText.html.twig', [
+			'count' => $value
+		]);
 	}
 } 

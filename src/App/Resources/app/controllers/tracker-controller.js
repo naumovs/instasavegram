@@ -12,9 +12,9 @@ define([
 			$.ajax(utils.reverse('trackEvent'), {
 				type: 'post',
 				data: {
-					cat: category,
-					ac: action,
-					v: value
+					'form[category]': category,
+					'form[action]': action,
+					'form[value]': value
 				}
 			});
 		}

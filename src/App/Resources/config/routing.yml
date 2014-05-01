@@ -16,6 +16,10 @@ trackEvent:
     pattern: /trackEvent
     defaults: { _controller: App:Common:trackEvent }
 
+imagesCountText:
+    pattern: /imagesCountText
+    defaults: { _controller: App:Common:imagesCountText }
+
 _appGlobals:
     pattern: /app/globals.js
     defaults: { _controller: App:Common:appGlobals }

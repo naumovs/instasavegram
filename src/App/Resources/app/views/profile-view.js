@@ -50,6 +50,7 @@ define([
 				collection: new MediaCollection(mediaCache.getValue()),
 				container: this.$el.find('.media-view')
 			}));
+			this.$el.find('.img-count').load(utils.reverse('imagesCountText'))
 
 			this.loadMore();
 		},
