@@ -34,8 +34,7 @@ class CommonController extends Controller
 	public function homepageAction()
 	{
 		return array(
-			'instagram_client_id' => $this->getParameter('instagram_client_id'),
-			'ga_tracking' => $this->getParameter('ga_tracking')
+			'instagram_client_id' => $this->getParameter('instagram_client_id')
 		);
 	}
 
@@ -124,5 +123,10 @@ class CommonController extends Controller
 		return $this->render('App:Common:imagesCountText.html.twig', [
 			'count' => $value
 		]);
+	}
+
+	public function faqAction() {
+
+		return $this->render('App:Common:faq.html.twig');
 	}
 } 
