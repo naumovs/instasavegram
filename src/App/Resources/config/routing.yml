@@ -1,12 +1,9 @@
 # https://github.com/KnpLabs/geekweek12/wiki/Routing
 
-homepage:
-    pattern: /
-    defaults: { _controller: App:Common:homepage }
 
 profile:
     pattern: /profile
-    defaults: { _controller: App:Common:profile }
+    defaults: { _controller: App:Common:profile, controller: 'profile#show' }
 
 imageProxy:
     pattern: /proxy
@@ -20,9 +17,17 @@ imagesCountText:
     pattern: /imagesCountText
     defaults: { _controller: App:Common:imagesCountText }
 
+faq:
+    pattern: /faq
+    defaults: { _controller: App:Common:faq }
+
 _appGlobals:
     pattern: /app/globals.js
     defaults: { _controller: App:Common:appGlobals }
+
+homepage:
+    pattern: /
+    defaults: { _controller: App:Common:homepage, controller: 'homepage#show' }
 
 #_appRoute:
 #    pattern: /{params}

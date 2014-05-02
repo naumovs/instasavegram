@@ -1,0 +1,7 @@
+{% extends app.request.isXmlHttpRequest() ? 'App::layout.ajax.html.twig' : 'App::layout.html.twig' %}
+
+{% block subtitle %}FAQ - {% endblock %}
+
+{% block payload %}
+    {% include 'App:Common:faq.content.html.twig' %}
+{% endblock %}
