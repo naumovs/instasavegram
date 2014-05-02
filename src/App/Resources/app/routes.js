@@ -6,25 +6,19 @@ define( [ 'app/symfony-router' ], function (SymfonyRouter) {
 	};
 
 	return function (match) {
-		var name;
+		var routes, i;
 		// TODO: specify controller and action via params on server side
 
-		match(route('homepage'), 'homepage#show', {
-			name: 'homepage'
-		});
+		routes = SymfonyRouter.ServerRoutes.routes;
 
-		match(route('profile'), 'profile#show', {
-			name: 'profile'
-		});
+		for (i = 0; i < routes.length; i++) {
 
-		for (name in SymfonyRouter.ServerRoutes.routes) {
-			if (SymfonyRouter.ServerRoutes.routes.hasOwnProperty(name)) {
-				match(route(name), 'dynamic#show', {
-					name: name,
-					routeParams: SymfonyRouter.ServerRoutes.routes[name]
-				});
-			}
+			match(route(routes[i].name), (routes[i].defaults.controller ? routes[i].defaults.controller : 'dynamic#show'), {
+				name: routes[i].name,
+				routeParams: routes[i]
+			});
 		}
+
 	};
 
 });

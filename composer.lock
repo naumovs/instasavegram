@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "695774ab1055a297400b89728e241304",
+    "hash": "054b4344e2f6908559d5d4caf64ddd6a",
     "packages": [
         {
             "name": "composer/installers",
@@ -826,21 +826,21 @@
         },
         {
             "name": "egonyan/jsrouting-bundle",
-            "version": "0.1.0",
+            "version": "0.3.0",
             "target-dir": "Egonyan/JsRoutingBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/egonyan/EgoJsRoutingBundle.git",
-                "reference": "1167885c1fd550539274e57485c51c289bbee295"
+                "url": "https://github.com/naumovs/EgoJsRoutingBundle.git",
+                "reference": "ec2061e16be9630724d86c2a786d69bece77229b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egonyan/EgoJsRoutingBundle/zipball/1167885c1fd550539274e57485c51c289bbee295",
-                "reference": "1167885c1fd550539274e57485c51c289bbee295",
+                "url": "https://api.github.com/repos/naumovs/EgoJsRoutingBundle/zipball/ec2061e16be9630724d86c2a786d69bece77229b",
+                "reference": "ec2061e16be9630724d86c2a786d69bece77229b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2",
+                "php": ">=5.3",
                 "symfony/framework-bundle": "~2.3",
                 "willdurand/jsonp-callback-validator": "~1.0"
             },
@@ -878,10 +878,10 @@
                 "simple js routing"
             ],
             "support": {
-                "source": "https://github.com/egonyan/EgoJsRoutingBundle/tree/0.1.0",
-                "issues": "https://github.com/egonyan/EgoJsRoutingBundle/issues"
+                "source": "https://github.com/naumovs/EgoJsRoutingBundle/tree/0.3.0",
+                "issues": "https://github.com/naumovs/EgoJsRoutingBundle/issues"
             },
-            "time": "2014-03-29 05:08:38"
+            "time": "2014-05-02 14:00:43"
         },
         {
             "name": "fzaninotto/faker",
@@ -1159,16 +1159,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.8.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174"
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/392ef35fd470638e08d0160d6b1cbab63cb23174",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
                 "shasum": ""
             },
             "require": {
@@ -1196,7 +1196,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8.x-dev"
+                    "dev-master": "1.9.x-dev"
                 }
             },
             "autoload": {
@@ -1223,20 +1223,20 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-03-23 19:50:26"
+            "time": "2014-04-24 13:29:03"
         },
         {
             "name": "nelmio/alice",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/alice.git",
-                "reference": "e225020d8e1f0ca867b4219698d6089b7a997761"
+                "reference": "0730001c3be46dedf393ef4168d6239d9969c61c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/e225020d8e1f0ca867b4219698d6089b7a997761",
-                "reference": "e225020d8e1f0ca867b4219698d6089b7a997761",
+                "url": "https://api.github.com/repos/nelmio/alice/zipball/0730001c3be46dedf393ef4168d6239d9969c61c",
+                "reference": "0730001c3be46dedf393ef4168d6239d9969c61c",
                 "shasum": ""
             },
             "require": {
@@ -1252,7 +1252,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -1277,7 +1277,7 @@
                 "orm",
                 "test"
             ],
-            "time": "2014-02-05 22:35:38"
+            "time": "2014-04-24 13:11:29"
         },
         {
             "name": "psr/log",
@@ -1754,16 +1754,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "3199b2e0d194f71fe2e13c95768b2ef22206682b"
+                "reference": "4697c33cdfb520dcf83fd6e4f7864fa26ddaebea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/3199b2e0d194f71fe2e13c95768b2ef22206682b",
-                "reference": "3199b2e0d194f71fe2e13c95768b2ef22206682b",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/4697c33cdfb520dcf83fd6e4f7864fa26ddaebea",
+                "reference": "4697c33cdfb520dcf83fd6e4f7864fa26ddaebea",
                 "shasum": ""
             },
             "require": {
@@ -1865,7 +1865,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-04-04 10:27:02"
+            "time": "2014-04-27 13:39:18"
         },
         {
             "name": "twig/extensions",

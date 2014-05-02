@@ -10,7 +10,7 @@ define(['js/server-routes'], function(ServerRoutes) {
 	SymfonyRouter.prototype.generateMatch = function(routename) {
 		var param, params, route, token, url, _i, _j, _len, _len1, _ref;
 
-		route = ServerRoutes.routes[routename];
+		route = ServerRoutes.routes[ ServerRoutes.routesbyName[routename] ];
 		url = '';
 		params = [];
 		_ref = route.tokens;
@@ -29,15 +29,12 @@ define(['js/server-routes'], function(ServerRoutes) {
 			url += '/:' + param;
 		}
 
-//		url = ServerRoutes.base_url + '/' + url;
 		if (/\/+$/.test(url)) {
 			url = url.substr(0, url.length - 1);
 		}
 		if (url.indexOf('/') === 0) {
 			url = url.replace('/', '');
 		}
-
-		delete ServerRoutes.routes[routename];
 
 		return url;
 	};
