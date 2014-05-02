@@ -1,8 +1,9 @@
 /* global window */
 define([
+	'jquery',
 	'./base/controller',
 	'app/views/nav-profile-view'
-], function (BaseController, NavProfileView) {
+], function ($, BaseController, NavProfileView) {
 	return BaseController.extend({
 		initialize: function () {
 			var me = this;
@@ -25,6 +26,19 @@ define([
 				}
 			});
 
+			this.subscribeEvent('dispatcher:dispatch', this.trackActiveItem);
+		},
+		trackActiveItem: function(controller, params, route, options) {
+			if (!this.menuItems) {
+				this.menuItems = $('#navbar :first-child');
+			}
+
+			this.menuItems.find('li').removeClass('active');
+			this.menuItems.find('a').each(function() {
+				if (route.path && this.href.indexOf('/' + route.path) !== -1) {
+					$(this.parentNode).addClass('active');
+				}
+			});
 		}
 	});
 
