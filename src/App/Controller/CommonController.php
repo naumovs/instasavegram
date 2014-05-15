@@ -47,8 +47,8 @@ class CommonController extends Controller
 	{
 		$fileUrl = $request->query->get('url');
 
-		if (preg_match('/http:\/\/distillery.+amazon.+com\/.+jpg$/', $fileUrl)
-			|| preg_match('/http:\/\/origincache\/.+jpg$/', $fileUrl)) {
+		// TODO: Verify current domain
+		if ($request->headers->get('referer')) {
 
 			$headers = [
 				'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
