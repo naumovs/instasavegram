@@ -41,8 +41,7 @@
     <div class="container-fluid navbar-static-top">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -57,7 +56,6 @@
                 <li><a href="{{ path('faq') }}">FAQ</a></li>
                 <li><a href="mailto:admin@egonyan.com">contact</a></li>
             </ul>
-
         </div>
         <!-- /.navbar-collapse -->
     </div>
@@ -77,15 +75,10 @@
     <div class="footer row">
         <div class="col-sm-10 col-sm-offset-1">
             <div class="footer-text">
-                <div class=" col-sm-6">
-                    {#<a href="{{ path('homepage') }}" class="footer_txt">about us</a>#}
-                    {#<a href="{{ path('homepage') }}" class="footer_txt">help</a>#}
-                    {#<a href="{{ path('homepage') }}" class="footer_txt">policy</a>#}
-                </div>
-                        <span class="footer-credits col-sm-6">created by
-                            <a href="http://instagram.com/egonyan">@egonyan</a> and
-                            <a href="http://instagram.com/zlayatapka">@zlayatapka</a>
-                        </span>
+                <span class="footer-credits col-sm-6 col-sm-offset-6">created by
+                    <a href="http://instagram.com/egonyan">@egonyan</a> and
+                    <a href="http://instagram.com/zlayatapka">@zlayatapka</a>
+                </span>
             </div>
 
         </div>
@@ -130,7 +123,6 @@
             curl: { location: 'vendor/bower_components/curl/src/curl/' },
             app: { location: 'app', main: 'application' }
         }
-        {#{% if app.debug %}, preloads: ["curl/debug"]{% endif %}#}
     };
 </script>
 <script type="text/javascript" src="{{ asset('vendor/bower_components/curl/src/curl.js') }}"></script>
