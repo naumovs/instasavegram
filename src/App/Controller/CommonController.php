@@ -117,7 +117,7 @@ class CommonController extends Controller
 			->getQuery()->getSingleScalarResult();
 
 		return $this->render('App:Common:imagesCountText.html.twig', [
-			'count' => $value
+			'count' => (int) $value
 		]);
 	}
 
