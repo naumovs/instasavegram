@@ -19,6 +19,12 @@ define([
 		className: 'row',
 		container: '#content .media-view',
 		autoRender: true,
-		itemView:   itemView
+		itemView:   itemView,
+		listen: {
+			'listLoaded collection': 'onAllLoaded'
+		},
+		onAllLoaded: function() {
+			$('.load-more').fadeOut();
+		}
 	});
 });
