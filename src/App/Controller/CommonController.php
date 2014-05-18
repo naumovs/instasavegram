@@ -55,7 +55,6 @@ class CommonController extends Controller
 				'Accept-Encoding:gzip,deflate,sdch',
 				'Cache-Control:no-cache',
 				'Pragma:no-cache',
-//				'Connection' => 'close',
 				'User-Agent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/33.0.1750.152 Chrome/33.0.1750.152 Safari/537.36'
 			];
 
@@ -73,10 +72,7 @@ class CommonController extends Controller
 			$response = new Response($fileData, 200, [
 				'Content-type' => 'image/jpeg',
 				'Accept-Ranges' => 'bytes',
-//				'Connection:',
 				'Connection' => 'keep-alive',
-				'ETag' => sha1($fileUrl),
-				'Cache-Control' => 'max-age=290304000, public'
 			]);
 
 			$response->headers->addCacheControlDirective('max-age', 290304000);
