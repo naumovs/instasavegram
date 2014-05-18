@@ -16,6 +16,7 @@ class CommonController extends Controller
 	{
 
 		$uri = str_replace($request->getSchemeAndHttpHost() . '/', '', $request->getUri());
+		$uri = str_replace(strrchr($uri, '.'), '', $uri);
 
 		$response = new Response('', 200, array(
 			'Content-type' => 'text/javascript'
