@@ -1,7 +1,7 @@
 <ul class="nav navbar-nav navbar-right">
     <li class="dropdown">
         {% if model.authenticated %}
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ model.username }} <b class="caret"></b></a>
+        <a href="{{ path('profile') }}" class="dropdown-toggle" data-toggle="dropdown">{{ model.username }} <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li><a href="#">Sign out</a></li>
         </ul>
