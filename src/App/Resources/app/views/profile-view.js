@@ -12,6 +12,10 @@ define([
 
 	return BaseView.extend({
 		events: {
+//  TODO: create separate module for social icons
+			'click .social-icons .twitter': 'shareTwitter',
+			'click .social-icons .facebook': 'shareFacebook',
+			'click .social-icons .plus': 'sharePlus',
 			'click .download-all': 'downloadAll',
 			'click a[rel=next]': 'loadMore'
 		},
@@ -74,6 +78,28 @@ define([
 			if (profileMediaView) {
 				profileMediaView.collection.loadNextPage();
 			}
+		},
+		shareTwitter: function(e) {
+			console.log(this.arguments);
+
+			e.currentTarget.href = [
+				'https://twitter.com/share?text=',
+				encodeURIComponent('I\'ve downloaded all my instagram photos thanks to this site!'), ' ',
+				encodeURIComponent(utils.reverse('homepage')),
+			].join('');
+
+		},
+		shareFacebook: function(e) {
+			e.currentTarget.href = [
+				'https://www.facebook.com/sharer/sharer.php?u=',
+				encodeURIComponent(utils.reverse('homepage')),
+			].join('');
+		},
+		sharePlus: function(e) {
+			e.currentTarget.href = [
+				'https://plus.google.com/share?url=',
+				encodeURIComponent(utils.reverse('homepage')),
+			].join('');
 		}
 	});
 });
