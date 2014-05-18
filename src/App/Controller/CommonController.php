@@ -15,7 +15,7 @@ class CommonController extends Controller
 	public function appGlobalsAction(Request $request)
 	{
 
-		$uri = str_replace($request->getBaseUrl() . '/', '', $request->getRequestUri());
+		$uri = str_replace($request->getSchemeAndHttpHost() . '/', '', $request->getUri());
 		$uri = str_replace(strrchr($uri, '.'), '', $uri);
 
 		$response = new Response('', 200, array(
