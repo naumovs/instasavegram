@@ -22,8 +22,11 @@ define([
 			});
 		},
 		trackPageView: function(route, actionParams, options) {
-			if (options && options.changeURL && window._gaq) {
-				window._gaq.push([ '_trackPageview', '/' + route.path ]);
+			if (options && options.changeURL && window.ga) {
+				ga('send', {
+					'hitType': 'pageview',
+					'page': '/' + route.path
+				});
 			}
 		}
 	});
