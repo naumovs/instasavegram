@@ -13,4 +13,5 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+    instagram_client_id: null
     ga_tracking: 	   ~
