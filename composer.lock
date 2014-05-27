@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "054b4344e2f6908559d5d4caf64ddd6a",
+    "hash": "9be1a32d76dd52afc5d25ff9fde95821",
     "packages": [
         {
             "name": "composer/installers",
@@ -305,16 +305,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7"
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/ceb18cf9b0230f3ea208b6238130fd415abda0a7",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
                 "shasum": ""
             },
             "require": {
@@ -324,6 +324,9 @@
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
             },
             "type": "library",
             "extra": {
@@ -376,7 +379,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2013-09-07 10:20:34"
+            "time": "2014-05-21 19:28:51"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -1226,6 +1229,58 @@
             "time": "2014-04-24 13:29:03"
         },
         {
+            "name": "naumovs/deploy-tool",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/naumovs/deploy-tool.git",
+                "reference": "c208d44018d762a4d6a9483d52b476c360fa3f37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/naumovs/deploy-tool/zipball/c208d44018d762a4d6a9483d52b476c360fa3f37",
+                "reference": "c208d44018d762a4d6a9483d52b476c360fa3f37",
+                "shasum": ""
+            },
+            "require": {
+                "pimple/pimple": "~2",
+                "symfony/config": "~2",
+                "symfony/console": "~2",
+                "symfony/filesystem": "~2",
+                "symfony/finder": "~2",
+                "symfony/options-resolver": "~2",
+                "symfony/process": "~2",
+                "symfony/yaml": "~2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "bin": [
+                "bin/dt"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Naumovs\\DeployTool\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Naumov",
+                    "email": "naumov.serge@gmail.com"
+                }
+            ],
+            "description": "Tool to simplify deploy process of your project",
+            "support": {
+                "source": "https://github.com/naumovs/deploy-tool/tree/0.1.4",
+                "issues": "https://github.com/naumovs/deploy-tool/issues"
+            },
+            "time": "2014-05-25 12:31:45"
+        },
+        {
             "name": "nelmio/alice",
             "version": "1.7.0",
             "source": {
@@ -1278,6 +1333,54 @@
                 "test"
             ],
             "time": "2014-04-24 13:11:29"
+        },
+        {
+            "name": "pimple/pimple",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Pimple.git",
+                "reference": "f99b3df12991c22463927aa6a18fd9b2212917f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/f99b3df12991c22463927aa6a18fd9b2212917f2",
+                "reference": "f99b3df12991c22463927aa6a18fd9b2212917f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pimple": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
+            "homepage": "http://pimple.sensiolabs.org",
+            "keywords": [
+                "container",
+                "dependency injection"
+            ],
+            "time": "2014-02-10 08:05:32"
         },
         {
             "name": "psr/log",
@@ -1474,25 +1577,28 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "748c01c1144713ac0118396935d10b6ceec91b68"
+                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/748c01c1144713ac0118396935d10b6ceec91b68",
-                "reference": "748c01c1144713ac0118396935d10b6ceec91b68",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/043e336b871f17a117f76ef8e190eddfc04c8d48",
+                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1-dev"
+                    "dev-master": "5.2-dev"
                 }
             },
             "autoload": {
@@ -1521,7 +1627,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-03-18 09:03:27"
+            "time": "2014-05-08 08:11:19"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -1754,16 +1860,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.4.4",
+            "version": "v2.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "4697c33cdfb520dcf83fd6e4f7864fa26ddaebea"
+                "reference": "885b6d17447fcc3cd9c42622321e5af4283dbde1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/4697c33cdfb520dcf83fd6e4f7864fa26ddaebea",
-                "reference": "4697c33cdfb520dcf83fd6e4f7864fa26ddaebea",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/885b6d17447fcc3cd9c42622321e5af4283dbde1",
+                "reference": "885b6d17447fcc3cd9c42622321e5af4283dbde1",
                 "shasum": ""
             },
             "require": {
@@ -1865,7 +1971,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-04-27 13:39:18"
+            "time": "2014-05-22 21:04:05"
         },
         {
             "name": "twig/extensions",
