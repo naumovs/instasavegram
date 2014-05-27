@@ -15,8 +15,15 @@ class CommonController extends Controller
 	public function appGlobalsAction(Request $request)
 	{
 
-		$uri = str_replace($request->getSchemeAndHttpHost() . '/', '', $request->getUri());
+		$uri = $request->getUri();
+		$uri = str_replace($request->getSchemeAndHttpHost(), '', $uri);
+
+		if (mb_strlen($request->getBaseUrl())) {
+			$uri = str_replace( $request->getBaseUrl() , '', $uri);
+		}
 		$uri = str_replace(strrchr($uri, '.'), '', $uri);
+
+		$uri = trim($uri, '/');
 
 		$response = new Response('', 200, array(
 			'Content-type' => 'text/javascript'
@@ -31,8 +38,12 @@ class CommonController extends Controller
 			)), $response);
 	}
 
-	public function homepageAction()
+	public function homepageAction(Request $request)
 	{
+		if ($request->getBaseUrl() . '/' !== $request->getRequestUri()) {
+			return $this->redirect($request->getSchemeAndHttpHost() . $request->getRequestUri() . '/');
+		}
+
 		return array(
 			'instagram_client_id' => $this->getParameter('instagram_client_id')
 		);

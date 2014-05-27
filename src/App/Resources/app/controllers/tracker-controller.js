@@ -4,7 +4,7 @@ define([
 	'jquery',
 	'app/globals',
 	'app/lib/utils',
-	'./base/controller',
+	'app/controllers/base/controller',
 ], function (Backbone, $, Globals, utils, BaseController) {
 	return BaseController.extend({
 		initialize: function () {

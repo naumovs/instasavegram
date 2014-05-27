@@ -1,7 +1,7 @@
 define([
 	'jquery',
 	'chaplin',
-	'./base/controller',
+	'app/controllers/base/controller',
 	'app/models/media-cache',
 	'app/models/media-collection',
 	'app/views/media-download-view',

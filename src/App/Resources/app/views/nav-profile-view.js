@@ -1,8 +1,8 @@
 define([
 	'chaplin',
-	'app/views/base/view',
-	'bootstrap/dropdown'
-], function (Chaplin, BaseView, $) {
+	'app/views/base/view'
+//	'bootstrap/dropdown'
+], function (Chaplin, BaseView) {
 
 	return BaseView.extend({
 		events: {
@@ -21,7 +21,7 @@ define([
 		},
 		render: function() {
 			BaseView.prototype.render.apply(this, arguments);
-			this.$el.find('.dropdown-toggle').dropdown();
+//			this.$el.find('.dropdown-toggle').dropdown();
 		},
 		logout: function() {
 			Chaplin.mediator.execute('session.logout');

@@ -1,7 +1,7 @@
 /* global window */
 define([
 	'jquery',
-	'./base/controller',
+	'app/controllers/base/controller',
 	'app/views/nav-profile-view'
 ], function ($, BaseController, NavProfileView) {
 	return BaseController.extend({

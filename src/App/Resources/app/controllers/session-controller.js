@@ -4,10 +4,10 @@ define([
 	'underscore',
 	'chaplin',
 	'app/lib/utils',
-	'./base/controller',
+	'app/controllers/base/controller',
 	'app/models/user-model',
-	'./session/hash-token-provider',
-	'./session/cookie-token-provider'
+	'app/controllers/session/hash-token-provider',
+	'app/controllers/session/cookie-token-provider'
 ], function ($, _, Chaplin, utils, BaseController, UserModel, HashTokenProvider, CookieTokenProvider) {
 	return BaseController.extend({
 		providers: [],

@@ -1,4 +1,4 @@
-define([ 'app/globals', 'chaplin', 'app/lib/utils', 'jquery', './dynamic-view', './homepage-random-view' ], function(Globals, Chaplin, utils, $, DynamicView, HomepageRandomView) {
+define([ 'app/globals', 'chaplin', 'app/lib/utils', 'jquery', 'app/views/dynamic-view', 'app/views/homepage-random-view' ], function(Globals, Chaplin, utils, $, DynamicView, HomepageRandomView) {
 
 	return DynamicView.extend({
 		events: {

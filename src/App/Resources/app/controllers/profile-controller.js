@@ -1,5 +1,5 @@
 define([
-    './base/controller',
+	'app/controllers/base/controller',
     'app/views/profile-view',
 	'chaplin'
 ], function(BaseController, ProfileView, Chaplin) {
