@@ -14,32 +14,48 @@ exports.config = {
 			// * map of ('outputFilePath': /regExp that matches input path/)
 			// * map of ('outputFilePath': function that takes input path)
 			joinTo: {
-				'js/app.js': /^web\/app/ //,
-//				'js/vendor.js': function (path) {
-//					var allowed = {
-//						'bower_components/console-polyfill/index.js': true,
-//						'bower_components/jquery/dist/jquery.js': true,
-//						'bower_components/lodash/dist/lodash.underscore.js': true,
-//						'bower_components/exoskeleton/exoskeleton.js': true,
-//						'bower_components/chaplin/chaplin.js': true
-//					};
+				'js/app.js': /^web\/app/,
+				'js/vendor.js': function (path) {
+					var allowed = {
+						'bower_components/console-polyfill/index.js': true,
+						'bower_components/jquery/dist/jquery.js': true,
+						'bower_components/lodash/dist/lodash.js': true,
+						'bower_components/exoskeleton/exoskeleton.js': true,
+						'bower_components/chaplin/chaplin.js': true,
+						'bower_components/nunjucks/browser/nunjucks-slim.js': true,
+						'bower_components/jszip/dist/jszip.js': true,
+						'bower_components/FileSaver/FileSaver.js': true
+					};
 //
-//					return allowed[path];
-//				}
+					return allowed[path];
+				}
 			},
 			order: {
 				before: [
-//					'bower_components/console-polyfill/index.js',
-//					'bower_components/jquery/dist/jquery.js',
-//					'bower_components/lodash/dist/lodash.underscore.js',
-//					'bower_components/exoskeleton/exoskeleton.js',
-//					'bower_components/chaplin/chaplin.js',
+					'bower_components/console-polyfill/index.js',
+					'bower_components/jquery/dist/jquery.js',
+					'bower_components/lodash/dist/lodash.underscore.js',
+					'bower_components/exoskeleton/exoskeleton.js',
+					'bower_components/chaplin/chaplin.js',
+					'bower_components/nunjucks-slim.js',
+					'web/app/lib/vendor/loader.js',
+					'web/app/lib/vendor/jquery.js',
+					'web/app/lib/vendor/underscore.js',
+					'web/app/lib/vendor/backbone.js',
+					'web/app/lib/vendor/chaplin.js',
+					'web/app/lib/vendor/nunjucks.js',
+					'web/app/lib/vendor/jszip.js',
+					'web/app/lib/vendor/saveAs.js',
+					'web/app/templates.js',
 					'web/app/application.js',
 					'web/app/symfony-router.js',
 					'web/app/lib/utils.js',
 					'web/app/controllers/base/controller.js',
 					'web/app/models/base/model.js',
-					'web/app/views/base/view.js'
+					'web/app/views/base/view.js',
+					'web/app/controllers/session-controller.js',
+					'web/app/controllers/menu-controller.js',
+					'web/app/controllers/dynamic-controller.js'
 				]
 			}
 
@@ -62,8 +78,12 @@ exports.config = {
 	},
 // Change this if you're using something other than backbone (e.g. 'ember').
 // Content of files, generated with `brunch generate` depends on the setting.
-	framework: 'backbone'
-//	plugins: {
+	framework: 'backbone',
+	plugins: {
+		afterBrunch: [
+			'node_modules/nunjucks/bin/precompile web/app/views >> web/app/templates.js'
+		]
+	}
 //		nunjucks: {
 //			filePatterns: /^web\/app\/views.*html$/,
 //			templatePath: /(web\/app)/,

@@ -36,6 +36,6 @@ define([
   return Application;
 });
 // TODO: do it right way
-curl(['jquery'], function($) {
+require(['jquery'], function($) {
 	$('.contact')[0].href += 'naumov.serge@gmail.com';
 });

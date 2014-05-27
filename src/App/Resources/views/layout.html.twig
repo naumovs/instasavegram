@@ -79,54 +79,14 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    var curl = {
-        baseUrl: "/",
-        pluginPath: "vendor/bower_components/curl/src/curl/plugin",
-        paths: {
-            'app/globals': "{{ path('_appGlobals') }}",
-            'js/server-routes': "{{ path('egonyan_js_routing') }}?amd",
-            jquery: "vendor/bower_components/jquery/dist/jquery",
-            underscore: "vendor/bower_components/lodash/dist/lodash",
-            backbone: "vendor/bower_components/exoskeleton/exoskeleton",
-            chaplin: "vendor/bower_components/chaplin/chaplin",
-            nunjucks: "vendor/bower_components/nunjucks/browser/nunjucks.js",
-            blob: {
-                location: 'vendor/bower_components/blob/Blob.js',
-                config: { loader: 'curl/loader/legacy', exports: 'Blob' }
-            },
-            filesaver: {
-                location: 'vendor/bower_components/FileSaver/FileSaver.js',
-                config: { loader: 'curl/loader/legacy', exports: 'saveAs', requires: ['blob'] }
-            },
-            'canvas.toBlob': {
-                location: 'vendor/bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.min.js',
-                config: { loader: 'curl/loader/legacy', requires: ['blob'] }
-            },
-            'jszip': {
-                location: 'vendor/bower_components/jszip/dist/jszip.js',
-                config: { exports: 'JSZip', requires: ['blob', 'filesaver'] }
-            }
 
-        },
-        packages: {
-            bootstrap: {
-                location: 'vendor/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/',
-                main: '../bootstrap.js',
-                config: { loader: 'curl/loader/legacy', requires: ['jquery'], exports: '$' }
-            },
-            curl: { location: 'vendor/bower_components/curl/src/curl/' },
-            app: { location: 'app', main: 'application' }
-        }
-    };
-</script>
-<script type="text/javascript" src="{{ asset('vendor/bower_components/curl/src/curl.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/vendor.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 {% block javascripts %}
 {% endblock %}
 <script type="text/javascript">
-    require = curl;
-    curl(['app/globals', 'app/lib/utils', 'app/application', 'app/routes', 'bootstrap/collapse']).then(function (Globals, Utils, Application, routes) {
+    require(['app/globals', 'app/lib/utils', 'app/application', 'app/routes'/*, 'bootstrap/collapse'*/], function (Globals, Utils, Application, routes) {
+        debugger;
         Globals['app'] = new Application({
             title: 'The ID',
             routes: routes,

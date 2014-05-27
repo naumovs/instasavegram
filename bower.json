@@ -6,7 +6,6 @@
     "lodash": "*",
     "exoskeleton": "*",
     "chaplin": "*",
-    "curl": "*",
     "console-polyfill": "*",
     "nunjucks": "*",
     "pure": "~0.4.2",
@@ -27,6 +26,9 @@
     "lodash": {
       "main": "dist/lodash.js"
     },
+	"nunjucks": {
+		"main": "browser/nunjucks-slim.js"
+	},
     "font-awesome": {
       "main": "css/font-awesome.css"
     },
