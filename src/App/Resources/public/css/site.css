@@ -1,20 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,600italic);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+details summary {
+  cursor: pointer; }
+details p {
+  cursor: default; }
+
 .divider-brown-line {
   height: 30px;
   background: #b2a295;
-  color: white;
-  padding: 5px; }
+  color: white; }
 
 .splash-container .splash-head {
   font-size: 120px;
   color: #b2a295;
   margin: 25px auto 0 auto;
-  text-align: center; }
+  text-align: center;
+  line-height: 84px;
+  letter-spacing: -2px; }
 .splash-container .splash-subhead {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 30px;
+  font-size: 30px;
+  letter-spacing: 1px;
   margin: 0 auto;
   text-align: center; }
   .splash-container .splash-subhead span {
@@ -23,26 +34,41 @@
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    margin: 5px 25px 0; }
+    margin: 5px 8px 0; }
 .splash-container .splash-get-started {
+  font-family: 'Josefin Sans', sans-serif;
   background: #d5ecb6;
   padding: 0 25px 25px;
   margin-bottom: 10px; }
   .splash-container .splash-get-started .splash-get-started-text {
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     text-align: center;
-    padding-top: 40px; }
+    padding-top: 40px;
+    font-weight: 600; }
+    .splash-container .splash-get-started .splash-get-started-text i {
+      display: inline-block;
+      font-weight: 600;
+      border-bottom: 1px solid white;
+      line-height: 30px; }
   .splash-container .splash-get-started .splash-get-started-btn {
     text-align: center;
     color: #b2a295; }
     .splash-container .splash-get-started .splash-get-started-btn .btn-lg {
-      font-size: 35px; }
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 30px;
+      padding-top: 16px;
+      color: #b2a295;
+      background-color: white; }
+      .splash-container .splash-get-started .splash-get-started-btn .btn-lg:hover {
+        background-color: #fffdf5; }
   .splash-container .splash-get-started .splash-get-started-note {
     padding-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: #b2a295;
-    font-style: italic; }
+    font-style: italic;
+    line-height: 100%; }
 .splash-container .social-text {
   color: #b2a295;
   font-size: 30px; }
@@ -101,8 +127,8 @@
     font-size: 12px; }
     .footer .footer-text a {
       color: white; }
-    .footer .footer-text:hover {
-      color: #d5ecb6; }
+      .footer .footer-text a:hover {
+        color: #d5ecb6; }
   .footer .footer-credits {
     text-align: right; }
     .footer .footer-credits a {

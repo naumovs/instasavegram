@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,600italic);
+
 // Core variables and mixins
 * {
   -webkit-box-sizing: border-box;
@@ -5,11 +7,21 @@
   box-sizing: border-box;
 }
 
+details {
+
+  summary {
+    cursor: pointer;
+  }
+
+  p {
+    cursor: default;
+  }
+}
+
 .divider-brown-line {
   height: 30px;
   background: #b2a295;
   color: white;
-  padding: 5px;
 }
 
 .splash-container {
@@ -19,9 +31,16 @@
     color: #b2a295;
     margin: 25px auto 0 auto;
     text-align: center;
+    line-height: 84px;
+    letter-spacing: -2px;
   }
 
   .splash-subhead {
+    font-family: 'Josefin Sans', sans-serif;
+
+    line-height: 30px;
+    font-size: 30px;
+    letter-spacing: 1px;
 
     margin: 0 auto;
     text-align: center;
@@ -32,26 +51,32 @@
       width: 10px;
       height: 10px;
       border-radius: 5px;
-      margin: 5px 25px 0;
+      margin: 5px 8px 0
     }
   }
 
   .splash-get-started {
 
+    font-family: 'Josefin Sans', sans-serif;
+
     background: #d5ecb6;
-    padding: 0 25px 25px ;
+    padding: 0 25px 25px;
     margin-bottom: 10px;
 
-
-    //    > div {
-    //      padding: 0 10px;
-    //    }
-
     .splash-get-started-text {
-      font-size: 30px;
+      font-size: 40px;
       color: white;
       text-align: center;
       padding-top: 40px;
+      font-weight: 600;
+
+      i {
+        display: inline-block;
+        font-weight: 600;
+        border-bottom: 1px solid white;
+        line-height: 30px;
+
+      }
     }
 
     .splash-get-started-btn {
@@ -59,15 +84,25 @@
       color: #b2a295;
 
       .btn-lg {
+        font-weight: 600;
         font-size: 35px;
+        line-height: 30px;
+        padding-top: 16px;
+        color: #b2a295;
+        background-color: white;
+
+        &:hover {
+          background-color: #fffdf5;
+        }
       }
     }
 
     .splash-get-started-note {
       padding-top: 20px;
-      font-size: 14px;
+      font-size: 16px;
       color: #b2a295;
       font-style: italic;
+      line-height: 100%;
     }
 
   }
@@ -95,7 +130,6 @@
     }
 
   }
-
 
   .home-random-block {
 
@@ -133,13 +167,13 @@
     }
   }
 
-
   .img-count {
     font-size: 120%;
     margin-top: 20px;
   }
 
 }
+
 .media-view-wrap {
   text-align: center;
   .download-all {
@@ -147,9 +181,10 @@
     margin-bottom: 20px;
   }
 }
+
 .navbar-default .navbar-collapse {
   background: #fbfbfb;
-//  height: 37px;
+  //  height: 37px;
 }
 
 .footer {
@@ -165,11 +200,12 @@
 
     a {
       color: white;
+
+      &:hover {
+        color: #d5ecb6;
+      }
     }
 
-    &:hover {
-      color: #d5ecb6;
-    }
   }
 
   .footer-credits {
@@ -206,7 +242,6 @@
 
     }
 
-
     .load-more {
       position: relative;
       padding-bottom: 40px;
@@ -239,7 +274,6 @@
   }
   .media-view {
 
-
     .media-item {
 
       padding-top: 10px;
@@ -254,7 +288,7 @@
         border-radius: 5px;
         &:hover {
           opacity: 0.8;
-          filter:alpha(opacity=80);
+          filter: alpha(opacity=80);
         }
       }
     }
@@ -273,8 +307,6 @@
     }
   }
 }
-
-
 
 #payload {
   visibility: hidden;

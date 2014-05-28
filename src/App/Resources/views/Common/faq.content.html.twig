@@ -3,32 +3,38 @@
         <h1 class="splash-head">The ID</h1>
 
         <div class="splash-subhead divider-brown-line">
-            <span class="splash-line-dot"></span>The Instagram Downloader<span class="splash-line-dot"></span>
+            <span class="splash-line-dot"></span>instagram downloader<span class="splash-line-dot"></span>
         </div>
     </div>
     <div class="splash-get-started row">
         <div class="col-sm-8 col-sm-offset-2">
             <h1>FREQUENTLY ASKED QUESTIONS</h1>
 
-
-            <h4>How do I sign-in with a different Account?</h4>
-
-            <details><p>Steps to login with a different account:</p>
-
-            <ol>
-                <li>Logout from InstagramDownloader by clicking on the [x] right behind your username</li>
-                <li>Go to <a href="https://instagram.com/accounts/logout/">https://instagram.com/accounts/logout/</a> to logout from instagram.</li>
-                <li>Visit <a href="{{ app.request.schemeAndHttpHost }}">{{ app.request.schemeAndHttpHost }}</a> again and login with your new account.</li>
-            </ol>
-            </details>
-            <h4>I am waiting for hours now, where are my photos?</h4>
             <details>
+                <summary class="h4">How do I sign-in with a different Account?</summary>
+                <p>Steps to login with a different account:</p>
+
+                <ol>
+                    <li>Logout from InstagramDownloader by clicking on the [x] right behind your username</li>
+                    <li>Go to <a
+                                href="https://instagram.com/accounts/logout/">https://instagram.com/accounts/logout/</a>
+                        to logout from instagram.
+                    </li>
+                    <li>Visit <a href="{{ app.request.schemeAndHttpHost }}">{{ app.request.schemeAndHttpHost }}</a>
+                        again and login with your new account.
+                    </li>
+                </ol>
+            </details>
+            <details>
+                <summary class="h4">I am waiting for hours now, where are my photos?</summary>
+
                 <p>Sometimes not all export jobs come to a successful end. If you still see the spinning loading icon, please click again on the green button, even if it says 'Please wait...'. This will start a new export job.</p>
             </details>
 
-            <h4>What to do if I found a bug?</h4>
             <details>
-            <p>You can create an issue on <a href="https://github.com/naumovs/theid/issues?milestone=&page=1&state=open">github</a> or just use a contact form.</p>
+                <summary class="h4">What to do if I found a bug?</summary>
+
+                <p>You can create an issue on <a href="https://github.com/naumovs/theid/issues?milestone=&page=1&state=open">github</a> or just use a contact form.</p>
             </details>
 
         </div>
