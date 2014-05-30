@@ -1,0 +1,25 @@
+@import "../variables";
+
+.has-logo {
+
+  .logo-head {
+    font-size: 120px;
+    font-weight: normal;
+    color: $color-brown;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    line-height: 93px;
+    letter-spacing: -2px;
+  }
+
+  .logo-subhead {
+    padding: 0;
+    line-height: 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
