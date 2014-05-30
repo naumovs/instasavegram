@@ -4,7 +4,7 @@ define([ 'app/globals', 'app/models/base/collection', 'app/models/media-model', 
     var MediaRandomCollection = BaseCollection.extend({
 	    model: MediaModel,
 	    url: function() {
-			    return 'https://api.instagram.com/v1/media/popular?count=12&client_id=' + Globals['instagram-client-id'];
+			    return 'https://api.instagram.com/v1/media/popular?count=8&client_id=' + Globals['instagram-client-id'];
 	    },
 	    parse: function(response) {
 
