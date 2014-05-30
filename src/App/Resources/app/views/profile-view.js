@@ -1,12 +1,11 @@
 define([
-	'require',
 	'jquery',
 	'app/lib/utils',
 	'app/views/base/view',
 	'app/models/media-cache',
 	'app/models/media-collection',
 	'app/views/profile-media-view'
-], function (require, $, utils, BaseView, mediaCache, MediaCollection, ProfileMediaView, JSZip, saveAs, modal) {
+], function ($, utils, BaseView, mediaCache, MediaCollection, ProfileMediaView, JSZip, saveAs, modal) {
 
 	var profileMediaView = null;
 
