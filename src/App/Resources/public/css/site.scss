@@ -1,177 +1,24 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,600italic);
+@import "variables";
+@import "fonts";
+@import "reset";
+@import "global";
 
-// Core variables and mixins
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+@import "partials/logo";
+@import "partials/content";
+@import "partials/menu";
+@import "partials/social";
 
-details {
+@import "pages/homepage";
+@import "pages/faq";
 
-  summary {
-    cursor: pointer;
-  }
-
-  p {
-    cursor: default;
-  }
+.max-width {
+  max-width: $max-width;
 }
 
 .divider-brown-line {
-  height: 30px;
-  background: #b2a295;
+  background: $color-brown;
   color: white;
-}
-
-.splash-container {
-
-  .splash-head {
-    font-size: 120px;
-    color: #b2a295;
-    margin: 25px auto 0 auto;
-    text-align: center;
-    line-height: 84px;
-    letter-spacing: -2px;
-  }
-
-  .splash-subhead {
-    font-family: 'Josefin Sans', sans-serif;
-
-    line-height: 30px;
-    font-size: 30px;
-    letter-spacing: 1px;
-
-    margin: 0 auto;
-    text-align: center;
-
-    span {
-      display: inline-block;
-      background: white;
-      width: 10px;
-      height: 10px;
-      border-radius: 5px;
-      margin: 5px 8px 0
-    }
-  }
-
-  .splash-get-started {
-
-    font-family: 'Josefin Sans', sans-serif;
-
-    background: #d5ecb6;
-    padding: 0 25px 25px;
-    margin-bottom: 10px;
-
-    .splash-get-started-text {
-      font-size: 40px;
-      color: white;
-      text-align: center;
-      padding-top: 40px;
-      font-weight: 600;
-
-      i {
-        display: inline-block;
-        font-weight: 600;
-        border-bottom: 1px solid white;
-        line-height: 30px;
-
-      }
-    }
-
-    .splash-get-started-btn {
-      text-align: center;
-      color: #b2a295;
-
-      .btn-lg {
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 30px;
-        padding-top: 16px;
-        color: #b2a295;
-        background-color: white;
-
-        &:hover {
-          background-color: #fffdf5;
-        }
-      }
-    }
-
-    .splash-get-started-note {
-      padding-top: 20px;
-      font-size: 16px;
-      color: #b2a295;
-      font-style: italic;
-      line-height: 100%;
-    }
-
-  }
-
-  .social-text {
-    color: #b2a295;
-    font-size: 30px;
-  }
-
-  .social-icons {
-    text-align: center;
-
-    a {
-      margin-left: 9px;
-    }
-
-    img {
-      opacity: 0.4;
-      filter: alpha(opacity=40);
-
-      &:hover {
-        opacity: 1;
-        filter: alpha(opacity=100);
-      }
-    }
-
-  }
-
-  .home-random-block {
-
-    .photo {
-      margin-top: 20px;
-      display: block;
-      position: relative;
-
-      img {
-        display: block;
-        width: 100%;
-
-      }
-      span {
-        display: none;
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        top: 40%;
-      }
-
-      &:hover {
-        opacity: 0.8;
-        filter: alpha(opacity=80);
-
-        span {
-          display: block;
-          color: white;
-          background: #b2a295;
-          opacity: 0.8;
-          filter: alpha(opacity=80);
-        }
-
-      }
-    }
-  }
-
-  .img-count {
-    font-size: 120%;
-    margin-top: 20px;
-  }
-
+  height: 30px;
 }
 
 .media-view-wrap {
@@ -189,10 +36,11 @@ details {
 
 .footer {
   margin-top: 30px;
-  background: #b2a295;
+  background: $color-brown;
   padding: 6px 0;
 
   .footer-text {
+    text-align: right;
 
     color: white;
     text-decoration: none;
@@ -222,7 +70,7 @@ details {
     display: block;
     float: right;
     font-size: 45px;
-    color: #b2a295;
+    color: $color-brown;
     margin-bottom: -7px;
   }
 
@@ -234,7 +82,7 @@ details {
       position: relative;
 
       img {
-        border: 8px solid #b2a295;
+        border: 8px solid $color-brown;
         border-radius: 5px;
         position: absolute;
         top: -45px;
@@ -249,7 +97,7 @@ details {
       a {
         display: block;
         width: 100%;
-        background: #b2a295;
+        background: $color-brown;
         position: absolute;
         top: -15px;
         height: 50px;
