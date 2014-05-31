@@ -21,6 +21,10 @@ faq:
     pattern: /faq
     defaults: { _controller: App:Common:faq }
 
+contact:
+    pattern: /contact
+    defaults: { _controller: App:Common:contact }
+
 _appGlobals:
     pattern: /app/globals.js
     defaults: { _controller: App:Common:appGlobals }

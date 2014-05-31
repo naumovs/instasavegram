@@ -133,7 +133,10 @@ class CommonController extends Controller
 	}
 
 	public function faqAction() {
-
 		return $this->render('App:Common:faq.html.twig');
 	}
-} 
+
+	public function contactAction() {
+		return $this->render('App:Common:contact.html.twig');
+	}
+}

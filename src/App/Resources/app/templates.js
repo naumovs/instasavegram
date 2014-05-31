@@ -56999,3 +56999,360 @@ root: root
 })();
 })();
 
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["homepage-random-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<a target=\"_blank\" rel=\"nofollow\" href=\"http://instagram.com/";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"caption", env.autoesc)),"from", env.autoesc)),"username", env.autoesc), env.autoesc);
+output += "\" class=\"photo\">\n    <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"low_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\" >\n    <span>@";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"caption", env.autoesc)),"from", env.autoesc)),"username", env.autoesc), env.autoesc);
+output += "</span>\n</a>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["media-download-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"modal fade\">\n    <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                <h4 class=\"modal-title\">Downloading and zipping your photos</h4>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"progress progress progress-striped active\">\n                    <div class=\"progress-bar\" role=\"progressbar\" style=\"width: 0%;\">\n                        <span class=\"sr-only\">0% Complete</span>\n                    </div>\n                </div>\n            </div>\n            <div class=\"modal-footer\">\n                <!--<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>-->\n                <!--<button type=\"button\" class=\"btn btn-primary\">Save changes</button>-->\n            </div>\n        </div><!-- /.modal-content -->\n    </div><!-- /.modal-dialog -->\n</div><!-- /.modal -->";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["nav-profile-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<ul class=\"nav navbar-nav navbar-right\">\n    <li class=\"dropdown\">\n        ";
+if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"authenticated", env.autoesc)) {
+output += "\n        <a href=\"";
+output += runtime.suppressValue((lineno = 3, colno = 22, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "path"), "path", ["profile"])), env.autoesc);
+output += "\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"username", env.autoesc), env.autoesc);
+output += " <b class=\"caret\"></b></a>\n        <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Sign out</a></li>\n        </ul>\n        ";
+;
+}
+output += "\n    </li>\n</ul>";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["profile-media-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"media-item\">\n    <a download href=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"standard_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\" data-width=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"standard_resolution", env.autoesc)),"width", env.autoesc), env.autoesc);
+output += "\" data-height=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "images")),"standard_resolution", env.autoesc)),"height", env.autoesc), env.autoesc);
+output += "\" >\n        <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"low_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\">\n    </a>\n</div>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["profile-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"profile has-content\">\n    <h2 class=\"profile-name\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"username", env.autoesc), env.autoesc);
+output += "</h2>\n\n    <div class=\"divider-brown-line\">\n        <div class=\"user-picture\">\n            <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"profile_picture", env.autoesc), env.autoesc);
+output += "\" width=\"100\" height=\"100\">\n        </div>\n        <div class=\"how-to-save\">click on the photos to save</div>\n    </div>\n\n    <div class=\"content-bg\">\n        <div class=\"content-wrap\">\n\n            <div class=\"download-all-wrap\">\n                <a class=\"download-all btn-lg\" href=\"#\">Zip All && Save</a>\n            </div>\n\n            <div class=\"media-view\"></div>\n        </div>\n        <div class=\"divider-brown-line\">\n            <a class=\"load-more\" href=\"#\" rel=\"next\">Load more</a>\n        </div>\n    </div>\n\n    <div class=\"content-after has-social\">\n        <div class=\"col-sm-5 col-sm-offset-1 img-count\"></div>\n        <div class=\"social-text cf\">\n            Tell your friends about us\n\n            <div class=\"social-icons\">\n                <a class=\"twitter\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 30, colno = 76, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/twitter1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n                <a class=\"facebook\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 31, colno = 77, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/fb1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n                <a class=\"plus\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 32, colno = 73, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/gp1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n            </div>\n        </div>\n    </div>\n\n\n</div>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["homepage-random-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<a target=\"_blank\" rel=\"nofollow\" href=\"http://instagram.com/";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"caption", env.autoesc)),"from", env.autoesc)),"username", env.autoesc), env.autoesc);
+output += "\" class=\"photo\">\n    <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"low_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\" >\n    <span>@";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"caption", env.autoesc)),"from", env.autoesc)),"username", env.autoesc), env.autoesc);
+output += "</span>\n</a>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["media-download-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"modal fade\">\n    <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                <h4 class=\"modal-title\">Downloading and zipping your photos</h4>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"progress progress progress-striped active\">\n                    <div class=\"progress-bar\" role=\"progressbar\" style=\"width: 0%;\">\n                        <span class=\"sr-only\">0% Complete</span>\n                    </div>\n                </div>\n            </div>\n            <div class=\"modal-footer\">\n                <!--<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>-->\n                <!--<button type=\"button\" class=\"btn btn-primary\">Save changes</button>-->\n            </div>\n        </div><!-- /.modal-content -->\n    </div><!-- /.modal-dialog -->\n</div><!-- /.modal -->";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["nav-profile-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<ul class=\"nav navbar-nav navbar-right\">\n    <li class=\"dropdown\">\n        ";
+if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"authenticated", env.autoesc)) {
+output += "\n        <a href=\"";
+output += runtime.suppressValue((lineno = 3, colno = 22, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "path"), "path", ["profile"])), env.autoesc);
+output += "\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"username", env.autoesc), env.autoesc);
+output += " <b class=\"caret\"></b></a>\n        <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Sign out</a></li>\n        </ul>\n        ";
+;
+}
+output += "\n    </li>\n</ul>";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["profile-media-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"media-item\">\n    <a download href=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"standard_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\" data-width=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"standard_resolution", env.autoesc)),"width", env.autoesc), env.autoesc);
+output += "\" data-height=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "images")),"standard_resolution", env.autoesc)),"height", env.autoesc), env.autoesc);
+output += "\" >\n        <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"low_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\">\n    </a>\n</div>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["profile-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"profile has-content\">\n    <h2 class=\"profile-name\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"username", env.autoesc), env.autoesc);
+output += "</h2>\n\n    <div class=\"divider-brown-line\">\n        <div class=\"user-picture\">\n            <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"profile_picture", env.autoesc), env.autoesc);
+output += "\" width=\"100\" height=\"100\">\n        </div>\n        <div class=\"how-to-save\">click on the photos to save</div>\n    </div>\n\n    <div class=\"content-bg\">\n        <div class=\"content-wrap\">\n\n            <div class=\"download-all-wrap\">\n                <a class=\"download-all btn-lg\" href=\"#\">Zip All && Save</a>\n            </div>\n\n            <div class=\"media-view\"></div>\n        </div>\n        <div class=\"divider-brown-line\">\n            <a class=\"load-more\" href=\"#\" rel=\"next\">Load more</a>\n        </div>\n    </div>\n\n    <div class=\"content-after has-social\">\n        <div class=\"col-sm-5 col-sm-offset-1 img-count\"></div>\n        <div class=\"social-text cf\">\n            Tell your friends about us\n\n            <div class=\"social-icons\">\n                <a class=\"twitter\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 30, colno = 76, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/twitter1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n                <a class=\"facebook\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 31, colno = 77, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/fb1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n                <a class=\"plus\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 32, colno = 73, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/gp1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n            </div>\n        </div>\n    </div>\n\n\n</div>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["homepage-random-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<a target=\"_blank\" rel=\"nofollow\" href=\"http://instagram.com/";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"caption", env.autoesc)),"from", env.autoesc)),"username", env.autoesc), env.autoesc);
+output += "\" class=\"photo\">\n    <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"low_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\" >\n    <span>@";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"caption", env.autoesc)),"from", env.autoesc)),"username", env.autoesc), env.autoesc);
+output += "</span>\n</a>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["media-download-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"modal fade\">\n    <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                <h4 class=\"modal-title\">Downloading and zipping your photos</h4>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"progress progress progress-striped active\">\n                    <div class=\"progress-bar\" role=\"progressbar\" style=\"width: 0%;\">\n                        <span class=\"sr-only\">0% Complete</span>\n                    </div>\n                </div>\n            </div>\n            <div class=\"modal-footer\">\n                <!--<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>-->\n                <!--<button type=\"button\" class=\"btn btn-primary\">Save changes</button>-->\n            </div>\n        </div><!-- /.modal-content -->\n    </div><!-- /.modal-dialog -->\n</div><!-- /.modal -->";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["nav-profile-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<ul class=\"nav navbar-nav navbar-right\">\n    <li class=\"dropdown\">\n        ";
+if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"authenticated", env.autoesc)) {
+output += "\n        <a href=\"";
+output += runtime.suppressValue((lineno = 3, colno = 22, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "path"), "path", ["profile"])), env.autoesc);
+output += "\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"username", env.autoesc), env.autoesc);
+output += " <b class=\"caret\"></b></a>\n        <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Sign out</a></li>\n        </ul>\n        ";
+;
+}
+output += "\n    </li>\n</ul>";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["profile-media-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"media-item\">\n    <a download href=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"standard_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\" data-width=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"standard_resolution", env.autoesc)),"width", env.autoesc), env.autoesc);
+output += "\" data-height=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "images")),"standard_resolution", env.autoesc)),"height", env.autoesc), env.autoesc);
+output += "\" >\n        <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"images", env.autoesc)),"low_resolution", env.autoesc)),"url", env.autoesc), env.autoesc);
+output += "\">\n    </a>\n</div>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["profile-view.html"] = (function() {function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+output += "<div class=\"profile has-content\">\n    <h2 class=\"profile-name\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"username", env.autoesc), env.autoesc);
+output += "</h2>\n\n    <div class=\"divider-brown-line\">\n        <div class=\"user-picture\">\n            <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "model")),"profile_picture", env.autoesc), env.autoesc);
+output += "\" width=\"100\" height=\"100\">\n        </div>\n        <div class=\"how-to-save\">click on the photos to save</div>\n    </div>\n\n    <div class=\"content-bg\">\n        <div class=\"content-wrap\">\n\n            <div class=\"download-all-wrap\">\n                <a class=\"download-all btn-lg\" href=\"#\">Zip All && Save</a>\n            </div>\n\n            <div class=\"media-view\"></div>\n        </div>\n        <div class=\"divider-brown-line\">\n            <a class=\"load-more\" href=\"#\" rel=\"next\">Load more</a>\n        </div>\n    </div>\n\n    <div class=\"content-after has-social\">\n        <div class=\"col-sm-5 col-sm-offset-1 img-count\"></div>\n        <div class=\"social-text cf\">\n            Tell your friends about us\n\n            <div class=\"social-icons\">\n                <a class=\"twitter\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 30, colno = 76, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/twitter1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n                <a class=\"facebook\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 31, colno = 77, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/fb1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n                <a class=\"plus\" href=\"#\" target=\"_blank\"><img src=\"";
+output += runtime.suppressValue((lineno = 32, colno = 73, runtime.callWrap(runtime.contextOrFrameLookup(context, frame, "asset"), "asset", ["img/gp1.png"])), env.autoesc);
+output += "\" width=\"50\" height=\"50\"></a>\n            </div>\n        </div>\n    </div>\n\n\n</div>\n";
+cb(null, output);
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+})();
+})();
+
