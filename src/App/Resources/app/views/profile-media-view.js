@@ -16,8 +16,9 @@ define([
 	});
 
 	return BaseCollectionView.extend({
-		className: 'row',
-		container: '#content .media-view',
+		noWrap: true,
+		animationDuration: 0,
+		container: '#content content-wrap',
 		autoRender: true,
 		itemView:   itemView,
 		listen: {

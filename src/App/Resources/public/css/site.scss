@@ -10,6 +10,7 @@
 
 @import "pages/homepage";
 @import "pages/faq";
+@import "pages/profile";
 
 .max-width {
   max-width: $max-width;
@@ -20,7 +21,7 @@
   color: white;
   height: 30px;
 }
-
+/*
 .media-view-wrap {
   text-align: center;
   .download-all {
@@ -28,23 +29,20 @@
     margin-bottom: 20px;
   }
 }
-
-.navbar-default .navbar-collapse {
-  background: #fbfbfb;
-  //  height: 37px;
-}
-
+*/
 .footer {
   margin-top: 30px;
   background: $color-brown;
   padding: 6px 0;
 
   .footer-text {
-    text-align: right;
 
     color: white;
-    text-decoration: none;
+    max-width: $max-width;
+    margin: 0 auto;
     font-size: 12px;
+    text-align: right;
+    text-decoration: none;
 
     a {
       color: white;
@@ -65,96 +63,21 @@
   }
 }
 
-.profile {
-  h2 {
-    display: block;
-    float: right;
-    font-size: 45px;
-    color: $color-brown;
-    margin-bottom: -7px;
-  }
 
-  .divider-brown-line {
-    margin-top: 60px;
-    clear: both;
 
-    .user-picture {
-      position: relative;
 
-      img {
-        border: 8px solid $color-brown;
-        border-radius: 5px;
-        position: absolute;
-        top: -45px;
-      }
-
-    }
-
-    .load-more {
-      position: relative;
-      padding-bottom: 40px;
-
-      a {
-        display: block;
-        width: 100%;
-        background: $color-brown;
-        position: absolute;
-        top: -15px;
-        height: 50px;
-        border-radius: 5px;
-        color: #fff;
-        text-align: center;
-        font-size: 35px;
-
-        &:hover {
-          background: #d9c6b5;
-          text-decoration: none;
-        }
-      }
-    }
-
-  }
-
-  .media-view-wrap {
-    background: #d5ecb6;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .media-view {
-
-    .media-item {
-
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      a {
-        display: block;
-      }
-      img {
-        width: 100%;
-        border: 2px solid white;
-        border-radius: 5px;
-        &:hover {
-          opacity: 0.8;
-          filter: alpha(opacity=80);
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .profile {
-    h2 {
-      float: left;
-      margin-left: 3%;
-      font-size: 60px;
-    }
-    .divider-brown-line {
-      margin-top: 0px;
-    }
-  }
-}
+//@media (min-width: 768px) {
+//  .profile {
+//    h2 {
+//      float: left;
+//      margin-left: 3%;
+//      font-size: 60px;
+//    }
+//    .divider-brown-line {
+//      margin-top: 0px;
+//    }
+//  }
+//}
 
 #payload {
   visibility: hidden;

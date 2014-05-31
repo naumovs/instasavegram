@@ -1,31 +1,39 @@
-<h2 class="profile-name">{{ model.username }}</h2>
+<div class="profile has-content">
+    <h2 class="profile-name">{{ model.username }}</h2>
 
-<div class="divider-brown-line row">
-    <div class="user-picture col-xs-4 col-xs-offset-0 col-sm-2 col-sm-offset-5">
-        <img src="{{ model.profile_picture }}" width="100" height="100">
-    </div>
-    <div class="col-xs-8 col-sm-5">click on the photos to download</div>
-</div>
-<div class="media-view-wrap row">
-    <a class="btn btn-default btn-lg btn-success download-all" href="#">Download All</a>
-    <div class="media-view col-xs-10 col-xs-offset-1 col-lg-10 col-lg-offset-1"></div>
-</div>
-
-<div class="divider-brown-line row">
-    <div class="load-more col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
-        <a href="#" rel="next">Load more</a>
+    <div class="divider-brown-line">
+        <div class="user-picture">
+            <img src="{{ model.profile_picture }}" width="100" height="100">
+        </div>
+        <div class="how-to-save">click on the photos to save</div>
     </div>
 
-</div>
+    <div class="content-bg">
+        <div class="content-wrap">
 
-<div class="splash-container row">
-    <div class="col-sm-5 col-sm-offset-1 img-count"></div>
-    <div class="col-sm-6 col-sm-offset-6 social-text">
-        Tell your friends about us
+            <div class="download-all-wrap">
+                <a class="download-all btn-lg" href="#">Zip All && Save</a>
+            </div>
+
+            <div class="media-view"></div>
+        </div>
+        <div class="divider-brown-line">
+            <a class="load-more" href="#" rel="next">Load more</a>
+        </div>
     </div>
-    <div class="col-sm-5 col-sm-offset-7 social-icons">
-        <a class="twitter" href="#" target="_blank"><img src="{{ asset('img/twitter1.png') }}" width="50" height="50"></a>
-        <a class="facebook" href="#" target="_blank"><img src="{{ asset('img/fb1.png') }}" width="50" height="50"></a>
-        <a class="plus" href="#" target="_blank"><img src="{{ asset('img/gp1.png') }}" width="50" height="50"></a>
+
+    <div class="content-after has-social">
+        <div class="col-sm-5 col-sm-offset-1 img-count"></div>
+        <div class="social-text cf">
+            Tell your friends about us
+
+            <div class="social-icons">
+                <a class="twitter" href="#" target="_blank"><img src="{{ asset('img/twitter1.png') }}" width="50" height="50"></a>
+                <a class="facebook" href="#" target="_blank"><img src="{{ asset('img/fb1.png') }}" width="50" height="50"></a>
+                <a class="plus" href="#" target="_blank"><img src="{{ asset('img/gp1.png') }}" width="50" height="50"></a>
+            </div>
+        </div>
     </div>
+
+
 </div>

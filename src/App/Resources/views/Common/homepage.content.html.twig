@@ -1,18 +1,16 @@
-<div class="homepage clearfix has-social has-content has-social">
+<div class="homepage clearfix has-social has-content">
     {% include "@App/Common/_logo.html.twig" %}
 
     <div class="content-bg">
         <div class="content-wrap">
             <div class="get-started-text ">save all your Instagram</div>
             <div class="get-started-btn">
-                <div class="get-started-text">
-                    <a href="https://instagram.com/oauth/authorize/?client_id={{ instagram_client_id }}&redirect_uri={{ app.request.schemeAndHttpHost }}/&response_type=token" class="btn btn-default btn-lg">Get Started</a>
-                </div>
+                <a href="https://instagram.com/oauth/authorize/?client_id={{ instagram_client_id }}&redirect_uri={{ app.request.schemeAndHttpHost }}/&response_type=token" class="btn btn-default btn-lg">Get Started</a>
             </div>
             <div class="get-started-note">By pressing the "Get Started" you will be redirected to the official Instagram Login Page and then
                 right back to our website. This is done to verify your account and to get access to the photos</div>
 
-            <div class="clearfix social-text cf">
+            <div class="social-text cf">
                 Tell your friends about us
 
                 <div class="social-icons">

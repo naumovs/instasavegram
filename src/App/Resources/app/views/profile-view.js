@@ -22,8 +22,8 @@ define([
 		containerMethod: 'html',
 		model: null,
 		template: 'profile-view.html',
-		className: 'profile',
 		autoRender: false,
+		noWrap: true,
 		initialize: function () {
 			BaseView.prototype.initialize.apply(this, arguments);
 

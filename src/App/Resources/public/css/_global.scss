@@ -8,6 +8,7 @@
 
 body {
   font-family: 'sofia_pro_regular', sans-serif;
+  color: #333333;
 }
 
 a {
@@ -21,6 +22,25 @@ a {
     text-decoration: underline;
   }
 }
+
+.btn-lg {
+  display: inline-block;
+  background-color: white;
+  border-radius: 3px;
+  color: $color-brown;
+  font-size: 35px;
+  line-height: 30px;
+  padding: 16px 20px;
+
+  &:hover {
+    background-color: $color-brown;
+    color: #fff;
+    text-decoration: none;
+  }
+
+}
+
+
 
 .cf {
   @include clearfix();
