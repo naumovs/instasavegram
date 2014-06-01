@@ -1,0 +1,28 @@
+{% extends 'App::layout.html.twig' %}
+
+{% block subtitle %}{% endblock %}
+
+{% block payload %}
+    <div class="contact has-content clearfix">
+        {% include "@App/Common/_logo.html.twig" %}
+
+        <div class="content-bg">
+            <div class="content-wrap">
+                <h1>Thank you</h1>
+
+                <p>
+                    Your response is very valuable for us, we will process this request and reply to you soon.
+                </p>
+
+            </div>
+        </div>
+        <div class="content-after">
+            {#<div class="col-sm-8 col-sm-offset-2">#}
+            <h3>Experiencing an issue?</h3>
+
+            <p>It's better to create an issue on our <a href="https://github.com/naumovs/theid/issues">github</a> page.</p>
+            {#</div>#}
+        </div>
+    </div>
+
+{% endblock %}

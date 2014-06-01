@@ -1,5 +1,25 @@
 <div class="contact has-content clearfix">
     {% include "@App/Common/_logo.html.twig" %}
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_label(form.name) }}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name) }}
+    </div>
+
+    <div>
+        {{ form_label(form.email) }}
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
+    </div>
+
+    <div>
+        {{ form_widget(form) }}
+    </div>
+
+    {{ form_end(form) }}
 
     <div class="content-bg">
         <div class="content-wrap">
@@ -9,7 +29,28 @@
                 Please fill in following form and we will reply to you as soon as possible.
             </p>
 
+            <form action="{{ form_action }}" method="post">
+                <label>
+                    <span>Name</span>
+                    {{ form_widget(form['name']) }}
+                </label>
+                <label>
+                    <span>Email</span>
+                    {{ form_widget(form['email']) }}
+                </label>
+                <label>
+                    <span>Text</span>
+                    {{ form_widget(form['text']) }}
 
+
+                </label>
+                {{ form_rest(form) }}
+
+                <div class="button-send-wrap">
+                    <input type="submit" value="Send" class="btn-lg">
+                    {#<a class="btn-lg noscript">Send</a>#}
+                </div>
+            </form>
         </div>
     </div>
     <div class="content-after">

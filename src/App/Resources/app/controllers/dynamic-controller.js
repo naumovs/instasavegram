@@ -1,6 +1,18 @@
-define([ 'jquery', 'app/lib/utils', 'app/globals', 'app/controllers/base/controller', 'app/views/dynamic-view' ], function($, utils, Globals, BaseController, DynamicView) {
+define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/controllers/base/controller', 'app/views/dynamic-view' ], function($, SymfonyRouter, utils, Globals, BaseController, DynamicView) {
 
-	return BaseController.extend({
+	var actions = {};
+
+	var routes, i;
+
+	routes = SymfonyRouter.ServerRoutes.routes;
+
+	for (i = 0; i < routes.length; i++) {
+		actions[routes[i].name] = function() {
+			return this.show.apply(this, arguments);
+		}
+	}
+
+	return BaseController.extend($.extend(actions, {
 		show: function(params, route) {
 			var template, payload = $('#payload');
 
@@ -18,5 +30,5 @@ define([ 'jquery', 'app/lib/utils', 'app/globals', 'app/controllers/base/control
 				template: html
 			}));
 		}
-	});
+	}));
 });

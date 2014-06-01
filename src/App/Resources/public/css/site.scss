@@ -11,6 +11,7 @@
 @import "pages/homepage";
 @import "pages/faq";
 @import "pages/profile";
+@import "pages/contact";
 
 .max-width {
   max-width: $max-width;
@@ -21,15 +22,7 @@
   color: white;
   height: 30px;
 }
-/*
-.media-view-wrap {
-  text-align: center;
-  .download-all {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-}
-*/
+
 .footer {
   margin-top: 30px;
   background: $color-brown;
@@ -66,26 +59,10 @@
 
 
 
-//@media (min-width: 768px) {
-//  .profile {
-//    h2 {
-//      float: left;
-//      margin-left: 3%;
-//      font-size: 60px;
-//    }
-//    .divider-brown-line {
-//      margin-top: 0px;
-//    }
-//  }
-//}
 
 #payload {
   visibility: hidden;
   height: 1px;
   overflow: hidden;
 }
-
-//@import "../vendor/bower_components/bootstrap-sass/lib/modals";
-//@import "../vendor/bower_components/bootstrap-sass/lib/progress-bars";
-//@import "../vendor/bower_components/bootstrap-sass/lib/dropdowns";
 

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\TrackEvent;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Component\Form\Form;
@@ -10,7 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CommonController extends Controller
 {
-
 
 	public function appGlobalsAction(Request $request)
 	{
@@ -136,7 +136,37 @@ class CommonController extends Controller
 		return $this->render('App:Common:faq.html.twig');
 	}
 
-	public function contactAction() {
-		return $this->render('App:Common:contact.html.twig');
+	public function contactAction(Request $request) {
+
+		$contact = new Contact();
+
+		$form = $this->createFormBuilder($contact, [
+			'action' => $this->generateUrl('contact'),
+			'method' => 'POST'
+		])
+			->add('name', 'text')
+			->add('email', 'email')
+			->add('text', 'textarea')
+			->getForm();
+
+
+		if ($request->isMethod($form->getConfig()->getMethod())) {
+
+			$form->handleRequest($request);
+
+			if ($form->isValid()) {
+
+				$this->persist($contact, true);
+
+				return $this->render('App:Common:contact.success.html.twig');
+			}
+		}
+
+		var_dump($form->createView()->isRendered());
+		return $this->render('App:Common:contact.html.twig', [
+			'form' => $form->createView(),
+			'form_rendered' => $form->createView()->isRendered(),
+			'form_action' => $form->getConfig()->getAction()
+		]);
 	}
 }

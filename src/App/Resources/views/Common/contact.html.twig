@@ -3,5 +3,8 @@
 {% block subtitle %}Contact - {% endblock %}
 
 {% block payload %}
+    {{ dump(form.rendered) }}
+    {{ dump(form_rendered) }}
+
     {% include 'App:Common:contact.content.html.twig' %}
 {% endblock %}

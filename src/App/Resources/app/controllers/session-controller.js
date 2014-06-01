@@ -19,11 +19,8 @@ define([
 			console.log('Starting session...');
 
 			this.subscribeEvent('session.changed', function (authenticated, user, accessToken, provider) {
-				console.log('session.changed event', arguments);
-
 				if (authenticated && provider && provider.getName() == 'Hash') {
 					utils.redirectTo('profile');
-
 				}
 			});
 
@@ -80,7 +77,6 @@ define([
 
 		},
 		loginUser: function (userData, accessToken, provider) {
-
 			var user = new UserModel(userData);
 			user.set('authenticated', true);
 

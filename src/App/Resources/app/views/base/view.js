@@ -9,7 +9,7 @@ define([ 'underscore', 'chaplin', 'app/globals', 'app/lib/utils', 'app/lib/view-
 			var globalFunc = {
 				app: Globals,
 				asset: function() { return '/' + arguments[0] },
-				path: utils.redirectTo
+				path: utils.reverse
 			};
 			return _.extend(
 				globalFunc,

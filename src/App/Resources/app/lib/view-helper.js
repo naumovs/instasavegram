@@ -7,9 +7,10 @@ define([ 'app/globals', 'nunjucks', 'app/lib/utils' ], function (Globals, nunjuc
 		autoescape: true
 	});
 
-	env.addFilter('path', function(url, params) {
-		return utils.reverse(url, params || {});
-	});
+//	env.addFilter('path', function(url, params) {
+//		debugger;
+//		return utils.reverse(url, params || {});
+//	});
 
 	function getTemplateFunction(template) {
 		var template;
