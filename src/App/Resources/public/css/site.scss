@@ -1,0 +1,65 @@
+@import "variables";
+@import "fonts";
+@import "reset";
+@import "global";
+
+@import "partials/bootstrap";
+@import "partials/logo";
+@import "partials/content";
+@import "partials/menu";
+@import "partials/social";
+
+@import "pages/homepage";
+@import "pages/faq";
+@import "pages/profile";
+@import "pages/contact";
+
+.max-width {
+  max-width: $max-width;
+}
+
+.divider-brown-line {
+  background: $color-brown;
+  color: white;
+  height: 30px;
+}
+
+.footer {
+  margin-top: 30px;
+  background: $color-brown;
+  padding: 6px 0;
+
+  .footer-text {
+
+    color: white;
+    max-width: $max-width;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: right;
+    text-decoration: none;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: #d5ecb6;
+      }
+    }
+
+  }
+
+  .footer-credits {
+    text-align: right;
+    a {
+      color: blanchedalmond;
+      text-decoration: none;
+    }
+  }
+}
+
+#payload {
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+}
+

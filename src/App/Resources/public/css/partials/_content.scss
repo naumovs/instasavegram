@@ -1,0 +1,19 @@
+.has-content {
+
+  .content-bg {
+    background: #d5ecb6;
+    margin-bottom: 10px;
+
+    .content-wrap {
+      padding: 20px 0;
+      margin: 0 auto;
+      max-width: $max-width;
+    }
+  }
+
+  .content-after {
+    margin: 0 auto;
+    max-width: $max-width;
+  }
+
+}

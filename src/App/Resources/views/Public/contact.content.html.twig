@@ -1,0 +1,50 @@
+<div class="contact has-content clearfix">
+    {% include "App:Public:_logo.html.twig" %}
+
+    <div class="content-bg">
+        <div class="content-wrap">
+            <h1>Contact</h1>
+
+            <p>
+                Please fill in following form and we will reply to you as soon as possible.
+            </p>
+
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_errors(form.name) }}
+
+            <label>
+                <span>Name</span>
+                {{ form_widget(form['name']) }}
+
+            </label>
+            {{ form_errors(form.email) }}
+
+            <label>
+                <span>Email</span>
+                {{ form_widget(form['email']) }}
+            </label>
+            {{ form_errors(form.text) }}
+            <label>
+                <span>Text</span>
+                {{ form_widget(form['text']) }}
+            </label>
+            {{ form_rest(form) }}
+
+            <div class="button-send-wrap">
+                <input type="submit" value="Send" class="btn-lg">
+                {#<a class="btn-lg noscript">Send</a>#}
+            </div>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+    <div class="content-after">
+        {#<div class="col-sm-8 col-sm-offset-2">#}
+        <h3>Experiencing an issue?</h3>
+
+        <p>It's better to create an issue on our <a href="https://github.com/naumovs/theid/issues">github</a> page.</p>
+        {#</div>#}
+    </div>
+</div>

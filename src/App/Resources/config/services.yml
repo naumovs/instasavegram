@@ -1,0 +1,7 @@
+parameters:
+#    naumovs_isg.example.class: Naumovs\ISGBundle\Example
+
+services:
+#    naumovs_isg.example:
+#        class: %naumovs_isg.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

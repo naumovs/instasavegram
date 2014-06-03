@@ -1,0 +1,8 @@
+app:
+    resource: "@App/Resources/config/routing.yml"
+    prefix:   /
+
+js-bundle:
+    resource: "@EgonyanJsRoutingBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,50 @@
+@import "variables";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'sofia_pro_regular', sans-serif;
+  color: #333333;
+  overflow-y: scroll;
+
+}
+
+a {
+  color: $color-brown;
+  text-decoration: none;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $color-brown-light;
+    text-decoration: underline;
+  }
+}
+
+.btn-lg {
+  display: inline-block;
+  background-color: white;
+  border-radius: 3px;
+  color: $color-brown;
+  font-size: 35px;
+  font-weight: 100;
+  line-height: 30px;
+  padding: 16px 20px;
+
+  &:hover {
+    background-color: $color-brown;
+    color: #fff;
+    text-decoration: none;
+  }
+
+}
+
+
+
+.cf {
+  @include clearfix();
+}

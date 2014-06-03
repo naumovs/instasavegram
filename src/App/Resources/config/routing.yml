@@ -1,0 +1,32 @@
+
+imageProxy:
+    pattern: /proxy
+    defaults: { _controller: App:Common:imageProxy }
+
+trackEvent:
+    pattern: /trackEvent
+    defaults: { _controller: App:Common:trackEvent }
+
+imagesCountText:
+    pattern: /imagesCountText
+    defaults: { _controller: App:Common:imagesCountText }
+
+_appGlobals:
+    pattern: /app/globals.js
+    defaults: { _controller: App:Common:appGlobals }
+
+faq:
+    pattern: /faq
+    defaults: { _controller: App:Public:faq }
+
+contact:
+    pattern: /contact
+    defaults: { _controller: App:Public:contact }
+
+profile:
+    pattern: /profile
+    defaults: { _controller: App:Public:profile, controller: 'profile#show' }
+
+homepage:
+    pattern: /
+    defaults: { _controller: App:Public:homepage, controller: 'homepage#show' }

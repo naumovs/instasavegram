@@ -1,0 +1,17 @@
+$max-width: 1020px;
+$color-brown: #b2a295;
+$color-brown-light: #d9c6b5;
+
+
+@mixin clearfix {
+
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+
+  &:after{
+    clear: both;
+  }
+}

@@ -1,0 +1,51 @@
+{
+	"name": "instasavegram",
+	"version": "0.0.1",
+	"dependencies": {
+		"jquery": "*",
+		"lodash": "*",
+		"exoskeleton": "*",
+		"chaplin": "*",
+		"console-polyfill": "*",
+		"nunjucks": "*",
+		"blob": "*",
+		"blueimp-canvas-to-blob": "~2.1.0",
+		"FileSaver": "*",
+		"jszip": "git://github.com/Stuk/jszip.git"
+	},
+	"overrides": {
+		"blob": {
+			"main": "Blob.js"
+		},
+		"chaplin": {
+			"dependencies": {
+				"exoskeleton": "*"
+			}
+		},
+		"lodash": {
+			"main": "dist/lodash.js"
+		},
+		"nunjucks": {
+			"main": "browser/nunjucks-slim.js"
+		},
+		"FileSaver": {
+			"main": "FileSaver.js"
+		}
+	},
+	"private": true,
+	"authors": [
+		"sergey <sergey@wikia-inc.com>"
+	],
+	"moduleType": [
+		"amd"
+	],
+	"license": "GPL",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"web/vendor",
+		"test",
+		"tests"
+	]
+}
