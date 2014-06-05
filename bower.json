@@ -5,7 +5,6 @@
 		"jquery": "*",
 		"lodash": "*",
 		"exoskeleton": "*",
-		"chaplin": "*",
 		"console-polyfill": "*",
 		"nunjucks": "*",
 		"blob": "*",
@@ -16,11 +15,6 @@
 	"overrides": {
 		"blob": {
 			"main": "Blob.js"
-		},
-		"chaplin": {
-			"dependencies": {
-				"exoskeleton": "*"
-			}
 		},
 		"lodash": {
 			"main": "dist/lodash.js"
