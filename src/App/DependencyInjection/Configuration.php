@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
 
 		$rootNode
 			->children()
-				->scalarNode('instagram_client_id')->cannotBeEmpty()->end()
+				->scalarNode('instagram_client_id')->defaultNull()->end()
 				->scalarNode('ga_tracking')->defaultNull()->end()
 			->end();
         // Here you should define the parameters that are allowed to
