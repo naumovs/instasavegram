@@ -1,4 +1,4 @@
-define('chaplin', ['backbone', 'underscore'], function(Backbone, _) {
+define('chaplin', function() {
 	'use strict';
 
 	var Chaplin;
@@ -3064,11 +3064,10 @@ define('chaplin', ['backbone', 'underscore'], function(Backbone, _) {
 			});
 		};
 
-		regDeps(Backbone, _);
-		window.Chaplin = Chaplin =loader('chaplin');
+		regDeps(window.Backbone, window._);
 
+		window.Chaplin = loader('chaplin');
 	})();
 
-
-	return Chaplin;
+	return window.Chaplin;
 })
