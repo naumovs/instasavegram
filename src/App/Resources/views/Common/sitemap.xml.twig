@@ -4,7 +4,7 @@
     {% for url in urls %}
     <url>
         {% for key,value in url %}
-        <{{ key }}>{{ value }}</key>
+        <{{ key }}>{{ value }}</{{ key }}>
         {% endfor %}
     </url>
     {% endfor %}
