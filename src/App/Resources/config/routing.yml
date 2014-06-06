@@ -17,16 +17,20 @@ _appGlobals:
 
 faq:
     pattern: /faq
-    defaults: { _controller: App:Public:faq }
+    defaults: { _controller: App:Public:faq, page_title: 'FAQ' }
 
 contact:
     pattern: /contact
-    defaults: { _controller: App:Public:contact }
+    defaults: { _controller: App:Public:contact, page_title: 'Contact' }
 
 profile:
     pattern: /profile
-    defaults: { _controller: App:Public:profile, controller: 'profile#show' }
+    defaults: { _controller: App:Public:profile, controller: 'profile#show', page_title: 'Profile' }
 
 homepage:
     pattern: /
-    defaults: { _controller: App:Public:homepage, controller: 'homepage#show' }
+    defaults: { _controller: App:Public:homepage, controller: 'homepage#show', page_title: '' }
+
+sitemap:
+    pattern: /sitemap.xml
+    defaults: { _controller: App:Common:sitemap, _format: 'xml' }

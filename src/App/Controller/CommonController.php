@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class CommonController extends AbstractController
 {
@@ -116,4 +117,30 @@ class CommonController extends AbstractController
 		]);
 	}
 
+
+	public function sitemapAction() {
+
+		return $this->render('App:Common:sitemap.xml.twig', [
+
+			'urls' => [
+				[
+					'loc' => $this->generateUrl('homepage',[], true),
+					'changefreq' => 'monthly',
+					'priority' => 1
+				],
+				[
+					'loc' => $this->generateUrl('faq',[], true),
+					'changefreq' => 'weekly',
+					'priority' => 1
+				],
+				[
+					'loc' => $this->generateUrl('contact',[], true),
+					'changefreq' => 'monthly'
+				],
+
+			]
+
+		]);
+
+	}
 }
