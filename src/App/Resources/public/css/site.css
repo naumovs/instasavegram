@@ -609,11 +609,12 @@ a {
   background: #d5ecb6;
   margin-bottom: 10px; }
   .has-content .content-bg .content-wrap {
-    padding: 20px 0;
+    padding: 20px 20px;
     margin: 0 auto;
     max-width: 1020px; }
 .has-content .content-after {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 1020px; }
 
 .navigation ul {
@@ -656,6 +657,12 @@ a {
       opacity: 1;
       filter: alpha(opacity=100); }
 
+@media (max-width: 800px) {
+  .has-social .social-text {
+    width: 100%; }
+  .has-social .social-icons {
+    float: none;
+    padding-right: 0px; } }
 .homepage .content-wrap {
   font-weight: 100; }
 .homepage .get-started-text {
@@ -714,6 +721,11 @@ a {
   font-size: 120%;
   margin-top: 20px; }
 
+@media (max-width: 768px) and (orientation: portrait) {
+  .homepage .get-started-note {
+    width: 100%;
+    margin-left: 0%;
+    padding: 20px; } }
 .faq details {
   margin-bottom: 20px; }
   .faq details summary {
@@ -810,6 +822,18 @@ a {
   float: right;
   font-weight: 100; }
 
+@media (max-width: 800px) {
+  .profile .img-count {
+    width: 100%;
+    float: none; }
+  .profile .has-social .social-text {
+    position: static;
+    width: 100%;
+    margin: 20px;
+    padding-left: 0px; }
+  .profile .has-social .social-icons {
+    float: none;
+    padding-right: 0px; } }
 .contact form {
   display: block;
   margin: 0 auto 20px auto;

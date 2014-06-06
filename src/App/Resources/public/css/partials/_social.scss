@@ -41,3 +41,17 @@
   }
 
 }
+
+
+@media (max-width: 800px) {
+  .has-social {
+    .social-text {
+      width: 100%;
+    }
+
+    .social-icons {
+      float: none;
+      padding-right: 0px;
+    }
+  }
+}
