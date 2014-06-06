@@ -6,11 +6,6 @@
     <title>{% block subtitle %}{% endblock %} instasavegram</title>
     <meta name="description" content="instasavegram - a simple way to save all your Instagram photos to your local hard drive. Download your Instagram images and upload them to Facebook, Flickr or Google+.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {% block stylesheets %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
-    <link rel="stylesheet" href="{{ asset('bundles/app/css/site.css') }}">
-
     {% if ga_tracking is not empty -%}
         <script>
             (function (a, b, c, d, e, f) {
@@ -29,6 +24,10 @@
             ga('send', 'pageview');
         </script>
     {%- endif %}
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/site.css') }}">
 </head>
 <body>
 <nav class="navigation cf" id="nav" role="navigation">
