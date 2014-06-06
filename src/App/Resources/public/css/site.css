@@ -381,7 +381,7 @@ a {
   text-decoration: none;
   transition: color 0.2s ease-in-out; }
   a:hover {
-    color: #d9c6b5;
+    color: #997665;
     text-decoration: underline; }
 
 .btn-lg {
@@ -606,7 +606,7 @@ a {
   text-align: center; }
 
 .has-content .content-bg {
-  background: #d5ecb6;
+  background: #cbdfd6;
   margin-bottom: 10px; }
   .has-content .content-bg .content-wrap {
     padding: 20px 20px;
@@ -764,7 +764,7 @@ a {
     text-align: center; }
     .profile .divider-brown-line .load-more:hover {
       background: #ffffff;
-      border: 1px solid #d9c6b5;
+      border: 1px solid #997665;
       color: #b2a295;
       text-decoration: none; }
 .profile .user-info-wrap {
