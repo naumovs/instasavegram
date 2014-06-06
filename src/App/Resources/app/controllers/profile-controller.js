@@ -7,6 +7,8 @@ define([
     return BaseController.extend({
 		show: function() {
 
+			this.adjustTitle('Profile');
+
 			if (!Chaplin.mediator.user || !Chaplin.mediator.user.get('authenticated')) {
 				return this.redirectTo('homepage');
 			}

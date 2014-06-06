@@ -3,9 +3,10 @@ define(['chaplin'], function(Chaplin) {
 
   var Controller = Chaplin.Controller.extend({
     // Place your application-specific controller features here.
-//    beforeAction: function() {
-//      this.reuse('site', SiteView);
-//    }
+    beforeAction: function() {
+     	this.adjustTitle('');
+		Chaplin.Controller.prototype.beforeAction.apply(this,arguments);
+    }
   });
 
   return Controller;

@@ -1,4 +1,4 @@
-define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/controllers/base/controller', 'app/views/dynamic-view' ], function($, SymfonyRouter, utils, Globals, BaseController, DynamicView) {
+define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/controllers/base/controller', 'app/views/dynamic-view' ], function ($, SymfonyRouter, utils, Globals, BaseController, DynamicView) {
 
 	var actions = {};
 
@@ -7,13 +7,26 @@ define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/co
 	routes = SymfonyRouter.ServerRoutes.routes;
 
 	for (i = 0; i < routes.length; i++) {
-		actions[routes[i].name] = function() {
-			return this.show.apply(this, arguments);
-		}
+		(function () {
+
+			var page_title = routes[i].defaults.page_title;
+
+			actions[routes[i].name] = function () {
+
+				if (page_title) {
+					this.adjustTitle(page_title)
+				} else {
+					this.adjustTitle('');
+				}
+
+				return this.show.apply(this, arguments);
+			}
+		})()
+
 	}
 
 	return BaseController.extend($.extend(actions, {
-		show: function(params, route) {
+		show: function (params, route) {
 			var template, payload = $('#payload');
 
 			if (payload.length) {
@@ -24,8 +37,7 @@ define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/co
 				$.ajax(utils.reverse(route.name) + '?ajax').done(this.applyContent);
 			}
 		},
-		applyContent: function(html) {
-
+		applyContent: function (html) {
 			this.view = new (DynamicView.extend({
 				template: html
 			}));

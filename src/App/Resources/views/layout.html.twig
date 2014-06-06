@@ -65,7 +65,7 @@
 <script type="text/javascript">
     require(['app/globals', 'app/lib/utils', 'app/application', 'app/routes'], function (Globals, Utils, Application, routes) {
         Globals['app'] = new Application({
-            title: 'The ID',
+            title: '{{ app.request.host|title }}  ',
             routes: routes,
             controllerPath: 'app/controllers/',
             controllerSuffix: '-controller',
