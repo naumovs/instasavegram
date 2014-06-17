@@ -5,9 +5,9 @@
   h2 {
     color: $color-brown;
     display: block;
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 100;
-    margin-bottom: -1px;
+    margin-bottom: 6px;
     text-align: right;
     width: 50%;
     padding-right: 70px;
@@ -25,7 +25,7 @@
       font-size: 33px;
       font-weight: 100;
       height: 50px;
-      margin-top: -10px;
+      margin-top: -20px;
       padding: 3px 35px;
       text-align: center;
 
@@ -41,6 +41,7 @@
 
   .user-info-wrap {
     max-width: $max-width;
+    min-width: $min-width;
     text-align: center;
     margin: 0 auto;
 
@@ -48,7 +49,7 @@
       display: inline-block;
 
       img {
-        border: 8px solid $color-brown;
+        border: 2px solid $color-brown;
         border-radius: 5px;
         margin-top: -40px;
       }
@@ -56,9 +57,10 @@
     }
 
     .how-to-save {
+      color: $color-brown;
       width: 50%;
-      margin-top: -62px;
-      margin-left: 50%;
+      margin-top: -50px;
+      margin-left: 28%;
       text-align: right;
       padding-right: 2.5%;
     }
@@ -68,7 +70,7 @@
 
   .download-all-wrap {
     text-align: center;
-    margin: 40px 0 30px ;
+    margin: 70px 0 30px;
     font-weight: 100;
 
   }
@@ -103,7 +105,9 @@
 
 
   .content-after {
-    padding-top: 55px;
+    padding-top: 75px;
+    position: relative;
+    padding-bottom: 60px;
   }
 
   .has-social {
@@ -111,43 +115,44 @@
     .social-text {
 
       position: relative;
-      top: -50px;
       padding-top: 0;
-      margin-bottom: -50px;
+      margin-bottom: -30px;
     }
   }
 
 
   .img-count {
-    width: 45%;
-    float: right;
+    width: 33%;
+    position: absolute;
+    right: 29px;
+    top: 70px;
     font-weight: 100;
   }
 }
 
 
-@media (max-width: 800px) {
-  .profile {
-
-    .img-count {
-      width: 100%;
-      float: none;
-    }
-
-    .has-social {
-      .social-text {
-        position: static;
-        width: 100%;
-        margin: 20px;
-        padding-left: 0px;
-      }
-
-      .social-icons {
-        float: none;
-        padding-right: 0px;
-      }
-    }
-
-
-  }
-}
+//@media (max-width: 800px) {
+//  .profile {
+//
+//    .img-count {
+//      width: 100%;
+//      float: none;
+//    }
+//
+//    .has-social {
+//      .social-text {
+//        position: static;
+//        width: 100%;
+//        margin: 20px;
+//        padding-left: 0px;
+//      }
+//
+//      .social-icons {
+//        float: none;
+//        padding-right: 0px;
+//      }
+//    }
+//
+//
+//  }
+//}

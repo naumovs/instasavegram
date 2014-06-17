@@ -6,11 +6,12 @@
     font-weight: 100;
     clear: both;
     color: $color-brown;
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 20px;
-    padding-left: 85px;
+    padding-left: 80px;
     padding-top: 45px;
-    width: 50%;
+    width: 66%;
+    top: 0;
 
   }
 
@@ -18,8 +19,8 @@
 
     float: right;
     margin-bottom: 20px;
-    padding-top: 10px;
-    padding-right: 85px;
+    margin-top: -8px;
+    padding-right: 65px;
     text-align: center;
 
     a {
@@ -43,15 +44,15 @@
 }
 
 
-@media (max-width: 800px) {
-  .has-social {
-    .social-text {
-      width: 100%;
-    }
-
-    .social-icons {
-      float: none;
-      padding-right: 0px;
-    }
-  }
-}
+//@media (max-width: 800px) {
+//  .has-social {
+//    .social-text {
+//      width: 100%;
+//    }
+//
+//    .social-icons {
+//      float: none;
+//      padding-right: 0px;
+//    }
+//  }
+//}

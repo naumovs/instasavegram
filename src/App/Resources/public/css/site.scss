@@ -15,12 +15,13 @@
 @import "pages/contact";
 .max-width {
   max-width: $max-width;
+  min-width: $min-width;
 }
 
 .divider-brown-line {
   background: $color-brown;
   color: white;
-  height: 30px;
+  height: 3px;
 }
 
 .footer {
@@ -32,6 +33,7 @@
 
     color: white;
     max-width: $max-width;
+    min-width: $min-width;
     margin: 0 auto;
     font-size: 12px;
     text-align: right;
