@@ -29,7 +29,7 @@ profile:
 
 homepage:
     pattern: /
-    defaults: { _controller: App:Public:homepage, controller: 'homepage#show', page_title: '' }
+    defaults: { _controller: App:Public:homepage, controller: 'homepage#show', page_title: 'Save, Download, Backup your Instagram photos ' }
 
 sitemap:
     pattern: /sitemap.xml

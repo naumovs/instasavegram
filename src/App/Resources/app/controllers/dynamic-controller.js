@@ -27,14 +27,14 @@ define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/co
 
 	return BaseController.extend($.extend(actions, {
 		show: function (params, route) {
-			var template, payload = $('#payload');
+			var template, payload = $('#payload'), me = this;
 
 			if (payload.length) {
 				template = payload.html();
-				this.applyContent(template);
+				me.applyContent(template);
 				payload.remove();
 			} else {
-				$.ajax(utils.reverse(route.name) + '?ajax').done(this.applyContent);
+				$.ajax(utils.reverse(route.name) + '?ajax').done(me.applyContent.bind(me));
 			}
 		},
 		applyContent: function (html) {

@@ -5,6 +5,8 @@ define([ 'app/controllers/dynamic-controller', 'app/views/homepage-view' ], func
 			this.view = new (HomepageView.extend({
 				template: html
 			}));
+
+			this.adjustTitle('Save, Download, Backup your Instagram photos');
 		}
 	});
 });
