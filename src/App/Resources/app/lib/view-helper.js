@@ -1,5 +1,5 @@
-define([ 'app/globals', 'nunjucks', 'app/lib/utils' ], function (Globals, nunjucks, utils) {
-	'use strict'
+define([ 'app/globals', 'nunjucks' ], function (Globals, nunjucks) {
+	'use strict';
 
 	var env = nunjucks.configure('/app/views', {
 		dev: Globals.debug,
@@ -13,9 +13,7 @@ define([ 'app/globals', 'nunjucks', 'app/lib/utils' ], function (Globals, nunjuc
 //	});
 
 	function getTemplateFunction(template) {
-		var template;
-
-		template = env.getTemplate(template);
+		var template = env.getTemplate(template);
 
 		return template.render.bind(template);
 	}

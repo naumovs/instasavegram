@@ -17,19 +17,33 @@ _appGlobals:
 
 faq:
     pattern: /faq
-    defaults: { _controller: App:Public:faq, page_title: 'FAQ' }
+    defaults:
+        _controller: App:Public:faq
+        page_title: 'FAQ'
+#        page_description: 'Frequently Asked Questions - find answers for usual questions how to use this service.'
 
 contact:
     pattern: /contact
-    defaults: { _controller: App:Public:contact, page_title: 'Contact' }
+    defaults:
+        _controller: App:Public:contact
+        page_title: 'Contact'
+#        page_description: 'In case you have a question or suggestion, please fill in following form and we will reply to you as soon as possible.'
 
 profile:
     pattern: /profile
-    defaults: { _controller: App:Public:profile, controller: 'profile#show', page_title: 'Profile' }
+    defaults:
+        _controller: App:Public:profile
+        controller: 'profile#show'
+        page_title: 'Profile'
+
 
 homepage:
     pattern: /
-    defaults: { _controller: App:Public:homepage, controller: 'homepage#show', page_title: 'Save, Download, Backup your Instagram photos ' }
+    defaults:
+        _controller: App:Public:homepage
+        controller: 'homepage#show'
+        page_title: 'Save, Download, Backup your Instagram photos '
+#        page_description: 'instasavegram.com - an online tool to save all your Instagram photos to your PC, tablet and even phone. Save your Instagram images to your drive and share them via Facebook, Flickr or Google+.'
 
 sitemap:
     pattern: /sitemap.xml

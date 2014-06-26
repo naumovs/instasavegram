@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+<head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% block subtitle %}{% endblock %} instasavegram</title>
-    <meta name="description" content="instasavegram - an online tool to save all your Instagram photos to your PC, tablet and even phone. Save your Instagram images to your drive and share them via Facebook, Flickr or Google+.">
+    {% set title = block('subtitle') %}
+    {% set description = block('description') %}
+    <title>{{ title|trim }} instasavegram</title>
+    <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{{ title|trim(' -') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ app.request.schemeAndHttpHost ~ app.request.pathInfo }}" />
+    <meta property="og:image" content="{{  app.request.schemeAndHttpHost ~ asset('favicon.png') }}" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="199">
+    <meta property="og:image:height" content="200">
+    <meta property="og:site_name" content="instasavegram" />
+    <meta property="og:description" content="{{ description }}" />
+
     {% if ga_tracking is not empty -%}
         <script>
             (function (a, b, c, d, e, f) {
@@ -51,8 +63,8 @@
     <div class="footer">
             <div class="footer-text">
                 <span class="footer-credits">created by
-                    <a href="http://instagram.com/egonyan">@egonyan</a> and
-                    <a href="http://instagram.com/zlayatapka">@zlayatapka</a>
+                    <a rel="author" href="https://plus.google.com/u/0/107278186993456908726?rel=author">@zlayatapka</a> and
+                    <a rel="author" href="http://instagram.com/egonyan?rel=author">@egonyan</a>
                 </span>
             </div>
     </div>

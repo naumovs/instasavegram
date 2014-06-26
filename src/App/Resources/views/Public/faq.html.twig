@@ -1,6 +1,7 @@
 {% extends app.request.isXmlHttpRequest() ? 'App::layout.ajax.html.twig' : 'App::layout.html.twig' %}
 
 {% block subtitle %}FAQ - {% endblock %}
+{% block description %}Frequently Asked Questions - find answers for usual questions how to use this service.{% endblock %}
 
 {% block payload %}
     {% include 'App:Public:faq.content.html.twig' %}
