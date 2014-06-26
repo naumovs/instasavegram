@@ -14,8 +14,7 @@ exports.config = {
 			// * map of ('outputFilePath': /regExp that matches input path/)
 			// * map of ('outputFilePath': function that takes input path)
 			joinTo: {
-				'js/app.js': /^web\/app/,
-				'js/vendor.js': function (path) {
+				'js/app.js': function (path) {
 					var allowed = {
 						'bower_components/console-polyfill/index.js': true,
 						'bower_components/jquery/dist/jquery.js': true,
@@ -27,17 +26,21 @@ exports.config = {
 						'bower_components/FileSaver/FileSaver.js': true
 					};
 //
-					return allowed[path];
+					return allowed[path] || /^web\/app/.test(path);
 				}
 			},
 			order: {
 				before: [
 					'bower_components/console-polyfill/index.js',
 					'bower_components/jquery/dist/jquery.js',
-					'bower_components/lodash/dist/lodash.underscore.js',
+					'bower_components/lodash/dist/lodash.js',
 					'bower_components/exoskeleton/exoskeleton.js',
 					'bower_components/chaplin/chaplin.js',
-					'bower_components/nunjucks-slim.js',
+					'bower_components/nunjucks/browser/nunjucks-slim.js',
+					'bower_components/FileSaver/FileSaver.js',
+					'bower_components/blob/Blob.js',
+					'bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.js',
+					'bower_components/jszip/dist/jszip.js',
 					'web/app/lib/vendor/loader.js',
 					'web/app/lib/vendor/jquery.js',
 					'web/app/lib/vendor/underscore.js',
@@ -56,6 +59,9 @@ exports.config = {
 					'web/app/controllers/session-controller.js',
 					'web/app/controllers/menu-controller.js',
 					'web/app/controllers/dynamic-controller.js'
+				],
+				after: [
+					'web/app/initialize.js'
 				]
 			}
 

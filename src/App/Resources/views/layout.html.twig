@@ -70,20 +70,11 @@
     </div>
 </div>
 
-<script type="text/javascript" src="{{ asset('js/vendor.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/app.js') }}" async></script>
 {% block javascripts %}
 {% endblock %}
 <script type="text/javascript">
-    require(['app/globals', 'app/lib/utils', 'app/application', 'app/routes'], function (Globals, Utils, Application, routes) {
-        Globals['app'] = new Application({
-            title: 'instasavegram',
-            routes: routes,
-            controllerPath: 'app/controllers/',
-            controllerSuffix: '-controller',
-            root: Globals['base-url']
-        });
-    });
+
 </script>
 </body>
 </html>

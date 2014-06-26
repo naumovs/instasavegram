@@ -11,7 +11,6 @@ define([
   var Application = Chaplin.Application.extend({
     // Set your application name here so the document title is set to
     // “Controller title – Site title” (see Layout#adjustTitle)
-    title: 'TheID',
 	  initMediator: function() {
 		  Chaplin.mediator.accessToken = null;
 		  Chaplin.mediator.user = null;

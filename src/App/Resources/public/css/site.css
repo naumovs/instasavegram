@@ -874,8 +874,3 @@ a {
     .footer .footer-credits a {
       color: blanchedalmond;
       text-decoration: none; }
-
-#payload {
-  visibility: hidden;
-  height: 1px;
-  overflow: hidden; }
