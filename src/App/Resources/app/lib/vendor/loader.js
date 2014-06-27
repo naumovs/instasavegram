@@ -84,7 +84,7 @@
 				}, false);
 			}
 
-			node.src = id + '.js';
+			node.src = '/' + id + '.js';
 			head.appendChild(node);
 			return;
 		}
