@@ -11,7 +11,26 @@ define([
 			BaseController.prototype.initialize.apply(this, arguments);
 			this.subscribeEvent('router:match', this.trackPageView);
 		},
-		trackEventLocal: function(category, action, value) {
+		trackEvent: function (category, action, value, label) {
+			if (window.ga) {
+				var event = {
+					'hitType': 'event',
+					'eventCategory': category,
+					'eventAction': action
+				};
+
+				if (value) {
+					event.eventValue = value;
+				}
+
+				if (label) {
+					event.eventLabel = label;
+				}
+
+				ga('send', event);
+			}
+		},
+		trackEventLocal: function (category, action, value) {
 			$.ajax(utils.reverse('trackEvent'), {
 				type: 'post',
 				data: {
@@ -20,8 +39,10 @@ define([
 					'form[value]': value
 				}
 			});
+
+			this.trackEvent(category, action, value);
 		},
-		trackPageView: function(route, actionParams, options) {
+		trackPageView: function (route, actionParams, options) {
 			if (options && options.changeURL && window.ga) {
 				ga('send', {
 					'hitType': 'pageview',
