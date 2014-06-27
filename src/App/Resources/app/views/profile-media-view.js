@@ -11,7 +11,7 @@ define([
 		},
 		noWrap: true,
 		trackDownload: function() {
-			Chaplin.mediator.trackerController.trackEventLocal('photo', 'download', '1');
+			Chaplin.mediator.trackerController.trackEventLocal('download', 'photo', '1');
 		}
 	});
 

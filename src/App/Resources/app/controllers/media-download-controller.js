@@ -61,8 +61,8 @@ define([
 
 				saveAs(blob, 'photos.zip');
 				me.view.$el.modal('hide');
-				Chaplin.mediator.trackerController.trackEventLocal('zip', 'download', '1');
-				Chaplin.mediator.trackerController.trackEventLocal('photos', 'download', count);
+				Chaplin.mediator.trackerController.trackEventLocal('download', 'zip', '1');
+				Chaplin.mediator.trackerController.trackEventLocal('download', 'photo', count);
 
 				setTimeout(function(){
 					me.dispose();
