@@ -34,7 +34,7 @@ define([ 'jquery', 'app/symfony-router', 'app/lib/utils', 'app/globals', 'app/co
 				me.applyContent(template);
 				payload.remove();
 			} else {
-				$.ajax(utils.reverse(route.name) + '?ajax').done(me.applyContent.bind(me));
+				$.ajax(utils.reverse(route.name, { '_locale': Globals['locale'] }) + '?ajax').done(me.applyContent.bind(me));
 			}
 		},
 		applyContent: function (html) {

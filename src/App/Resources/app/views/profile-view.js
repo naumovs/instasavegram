@@ -79,20 +79,20 @@ define([
 			e.currentTarget.href = [
 				'https://twitter.com/share?text=',
 				encodeURIComponent('I\'ve downloaded all my instagram photos thanks to this site!'), ' ',
-				encodeURIComponent(utils.reverse('homepage')),
+				encodeURIComponent(utils.reverse('homepage'))
 			].join('');
 
 		},
 		shareFacebook: function(e) {
 			e.currentTarget.href = [
 				'https://www.facebook.com/sharer/sharer.php?u=',
-				encodeURIComponent(utils.reverse('homepage')),
+				encodeURIComponent(utils.reverse('homepage'))
 			].join('');
 		},
 		sharePlus: function(e) {
 			e.currentTarget.href = [
 				'https://plus.google.com/share?url=',
-				encodeURIComponent(utils.reverse('homepage')),
+				encodeURIComponent(utils.reverse('homepage'))
 			].join('');
 		}
 	});
