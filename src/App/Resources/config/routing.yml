@@ -30,7 +30,7 @@ contact:
 #        page_description: 'In case you have a question or suggestion, please fill in following form and we will reply to you as soon as possible.'
 
 profile:
-    pattern: /{_locale}/profile
+    pattern: /profile
     defaults:
         _controller: App:Public:profile
         controller: 'profile#show'
