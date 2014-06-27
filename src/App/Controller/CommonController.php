@@ -124,7 +124,7 @@ class CommonController extends AbstractController
 
 			'urls' => [
 				[
-					'loc' => $this->generateUrl('homepage',[], true),
+					'loc' => $this->generateUrl('localized_homepage', [], true),
 					'changefreq' => 'monthly',
 					'priority' => 1
 				],
@@ -137,7 +137,6 @@ class CommonController extends AbstractController
 					'loc' => $this->generateUrl('contact',[], true),
 					'changefreq' => 'monthly'
 				],
-
 			]
 
 		]);

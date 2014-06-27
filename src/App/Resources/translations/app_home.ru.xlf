@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="d7f8c43a1c5d6da8b7b63cfc3f0e3d09" resname="save all your Instagram">
+        <source>save all your Instagram</source>
+        <target>сохрани все свои фотографии из Инстаграмма</target>
+      </trans-unit>
+      <trans-unit id="e0c4332e8c13be976552a059f106354f" resname="Get Started">
+        <source>Get Started</source>
+        <target>Перейти к профилю</target>
+      </trans-unit>
+      <trans-unit id="8c5dcc16ab98671a9338148e89cf4f4a" resname="By pressing the &quot;Get Started&quot; you will be redirected to the official Instagram Login Page and then&#10;                right back to our website. This is done to verify your account and to get access to the photos">
+        <source>By pressing the "Get Started" you will be redirected to the official Instagram Login Page and then
+                right back to our website. This is done to verify your account and to get access to the photos</source>
+        <target>Нажимая "Перейти к профилю" в первый раз, вы будете перенаправлены на официальную страницу авторизации Instagram и после этого вернетесь обратно на наш сайт. Это необходимо, чтобы получить доступ к Вашим фотографиям.</target>
+      </trans-unit>
+      <trans-unit id="f32780be878a657c489b527a3887e493" resname="Tell your friends about us">
+        <source>Tell your friends about us</source>
+        <target>Рассказать друзьям</target>
+      </trans-unit>
+      <trans-unit id="a5fa2c838aa03b1b5f56e03748645294" resname="Save, Download, Backup your Instagram photos">
+        <source>Save, Download, Backup your Instagram photos</source>
+        <target>Сохранить, Скачать, Скопировать фотографии Инстаграм - </target>
+      </trans-unit>
+      <trans-unit id="23583a3e1e964c7500974e6d1e600e2c" resname="instasavegram.com - an online tool to save all your Instagram photos to your PC, tablet and even phone. Save your Instagram images to your drive and share them via Facebook, Flickr or Google+.">
+        <source>instasavegram.com - an online tool to save all your Instagram photos to your PC, tablet and even phone. Save your Instagram images to your drive and share them via Facebook, Flickr or Google+.</source>
+        <target>instasavegram.com - онлайн-сервис для сохранения всех Ваших Instagram фотографий на компьютер, планшет и телефон. Сохрани свои Instagram фото на диск и делись ими через Facebook, Flickr или Google+.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

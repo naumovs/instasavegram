@@ -1,17 +1,18 @@
+{% trans_default_domain "app_home" %}
 <div class="homepage clearfix has-social has-content">
     {% include "App:Public:_logo.html.twig" %}
 
     <div class="content-bg">
         <div class="content-wrap">
-            <div class="get-started-text ">save all your Instagram</div>
+            <div class="get-started-text ">{% trans %}save all your Instagram{% endtrans %}</div>
             <div class="get-started-btn">
-                <a href="https://instagram.com/oauth/authorize/?client_id={{ instagram_client_id }}&redirect_uri={{ app.request.schemeAndHttpHost }}/&response_type=token" class="btn btn-default btn-lg">Get Started</a>
+                <a href="https://instagram.com/oauth/authorize/?client_id={{ instagram_client_id }}&redirect_uri={{ app.request.schemeAndHttpHost }}/&response_type=token" class="btn btn-default btn-lg">{% trans %}Get Started{% endtrans %}</a>
             </div>
-            <div class="get-started-note">By pressing the "Get Started" you will be redirected to the official Instagram Login Page and then
-                right back to our website. This is done to verify your account and to get access to the photos</div>
+            <div class="get-started-note">{% trans %}By pressing the "Get Started" you will be redirected to the official Instagram Login Page and then
+                right back to our website. This is done to verify your account and to get access to the photos{% endtrans %}</div>
 
             <div class="social-text cf">
-                Tell your friends about us
+                {% trans %}Tell your friends about us{% endtrans %}
 
                 <div class="social-icons">
                     <a class="twitter" href="#" target="_blank"><img src="{{ asset('bundles/app/images/twitter1.png') }}" width="50" height="50"></a>

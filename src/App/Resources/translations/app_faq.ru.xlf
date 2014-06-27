@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="df001dcc1ae2d9f82b3c5ccabc5057a2" resname="FREQUENTLY ASKED QUESTIONS">
+        <source>FREQUENTLY ASKED QUESTIONS</source>
+        <target>Часто задаваемые вопросы и ответы</target>
+      </trans-unit>
+      <trans-unit id="fddd15725876984beda54f90cb9fc7e6" resname="How do I sign-in with a different Account?">
+        <source>How do I sign-in with a different Account?</source>
+        <target>Как мне зайти в другой профиль?</target>
+      </trans-unit>
+      <trans-unit id="48740fca9f97eceb661ecc910341d045" resname="It is really easy as 2 simple steps to login with a different account:">
+        <source>It is really easy as 2 simple steps to login with a different account:</source>
+        <target>Легко! Чтоб зайти в другой аккаунт нужно лишь:</target>
+      </trans-unit>
+      <trans-unit id="3552c438044d4cfe840fb0cac7fa0f58" resname="Go to&#10;                        &lt;a href=&quot;https://instagram.com/accounts/manage_access&quot;&gt;https://instagram.com/accounts/manage_access&lt;/a&gt;&#10;                        and revoke access from &quot;Instasavegram.com&quot; application.">
+        <source>Go to
+                        &lt;a href="https://instagram.com/accounts/manage_access"&gt;https://instagram.com/accounts/manage_access&lt;/a&gt;
+                        and revoke access from "Instasavegram.com" application.</source>
+        <target>Перейти по ссылке
+                        &lt;a href="https://instagram.com/accounts/manage_access"&gt;https://instagram.com/accounts/manage_access&lt;/a&gt;
+                        и удалить "Instasavegram.com" из списка приложений.</target>
+      </trans-unit>
+      <trans-unit id="5b25060036ba369d2a422afdbf3a339e" resname="Visit &lt;a href=&quot;%url%&quot;&gt;%url%&lt;/a&gt;&#10;                        again and login with your new account.">
+        <source>Visit &lt;a href="%url%"&gt;%url%&lt;/a&gt;
+                        again and login with your new account.</source>
+        <target>Зайти на наш сайт &lt;a href="%url%"&gt;%url%&lt;/a&gt;
+            снова и авторизироваться под новым аккаунтом.</target>
+      </trans-unit>
+      <trans-unit id="732c51d501a5df39b8b7eb7b528d305a" resname="What to do if I found a bug?">
+        <source>What to do if I found a bug?</source>
+        <target>Что делать, если я нашел ошибку?</target>
+      </trans-unit>
+      <trans-unit id="69042b6bbf76fdcbb23a4be7c1dfba86" resname="Still have a question?">
+        <source>Still have a question?</source>
+        <target>Есть еще вопросы?</target>
+      </trans-unit>
+      <trans-unit id="8af466fa894b1cc3e25e0b5ab2dd7bb8" resname="Send us with a question via the &lt;a href=&quot;%url%&quot;&gt;contact&lt;/a&gt; form.">
+        <source>Send us with a question via the &lt;a href="%url%"&gt;contact&lt;/a&gt; form.</source>
+        <target>Не стесняйся, пиши нам используя страницу &lt;a href="%url%"&gt;контакта&lt;/a&gt;.</target>
+      </trans-unit>
+      <trans-unit id="21871a679bf8459a35731982cd680588" resname="FAQ -">
+        <source>FAQ -</source>
+        <target>ЧАВО -</target>
+      </trans-unit>
+      <trans-unit id="d85cb2ef4558783addbb1cfb157ce05d" resname="Frequently Asked Questions - find answers for usual questions how to use this service.">
+        <source>Frequently Asked Questions - find answers for usual questions how to use this service.</source>
+        <target>Часто Задаваемые Вопросы и Ответы - есть вопросы по поводу использования этого сервиса? На этой странице найдешь ответы на интересующие тебя вопросы.</target>
+      </trans-unit>
+      <trans-unit id="5fe3032bc1dd9fb8abe76037f76c07ee" resname="You can create an issue on&#10;                    &lt;a href=&quot;https://github.com/naumovs/instasavegram/issues&quot;&gt;github&lt;/a&gt; or&#10;                    just use a contact form.">
+        <source>You can create an issue on
+                    &lt;a href="https://github.com/naumovs/instasavegram/issues"&gt;github&lt;/a&gt; or
+                    just use a contact form.</source>
+        <target>Это просто: напиши нам используя форму контакта с нами.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

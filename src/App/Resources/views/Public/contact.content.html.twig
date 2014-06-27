@@ -1,12 +1,13 @@
+{% trans_default_domain "app_contact" %}
 <div class="contact has-content clearfix">
     {% include "App:Public:_logo.html.twig" %}
 
     <div class="content-bg">
         <div class="content-wrap">
-            <h1>Contact</h1>
+            <h1>{% trans %}Contact{% endtrans %}</h1>
 
             <p>
-                Please fill in following form and we will reply to you as soon as possible.
+                {% trans %}Please fill in following form and we will reply to you as soon as possible.{% endtrans %}
             </p>
 
             {{ form_start(form) }}
@@ -15,19 +16,19 @@
             {{ form_errors(form.name) }}
 
             <label>
-                <span>Name</span>
+                <span>{% trans %}Name{% endtrans %}</span>
                 {{ form_widget(form['name']) }}
 
             </label>
             {{ form_errors(form.email) }}
 
             <label>
-                <span>Email</span>
+                <span>{% trans %}Email{% endtrans %}</span>
                 {{ form_widget(form['email']) }}
             </label>
             {{ form_errors(form.text) }}
             <label>
-                <span>Text</span>
+                <span>{% trans %}Text{% endtrans %}</span>
                 {{ form_widget(form['text']) }}
             </label>
             {{ form_rest(form) }}
@@ -41,10 +42,8 @@
         </div>
     </div>
     <div class="content-after">
-        {#<div class="col-sm-8 col-sm-offset-2">#}
-        <h3>Experiencing an issue?</h3>
+            <h3>{% trans %}Experiencing an issue?{% endtrans %}</h3>
 
-        <p>It's better to create an issue on our <a href="https://github.com/naumovs/theid/issues">github</a> page.</p>
-        {#</div>#}
+            <p>{% trans %}It's better to create an issue on our <a href="https://github.com/naumovs/instasavegram/issues">github</a> page.{% endtrans %}</p>
     </div>
 </div>

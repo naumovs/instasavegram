@@ -1,47 +1,53 @@
+{% trans_default_domain "app_faq" %}
 <div class="faq has-content clearfix">
     {% include "App:Public:_logo.html.twig" %}
 
     <div class="content-bg">
         <div class="content-wrap">
-            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <h1>{% trans %}FREQUENTLY ASKED QUESTIONS{% endtrans %}</h1>
 
             <details>
-                <summary class="h4">How do I sign-in with a different Account?</summary>
-                <p>It is really easy as 2 simple steps to login with a different account:</p>
+                <summary class="h4">{% trans %}How do I sign-in with a different Account?{% endtrans %}</summary>
+                <p>{% trans %}It is really easy as 2 simple steps to login with a different account:{% endtrans %}</p>
                 <ol>
-                    <li>Go to
+                    <li>{% trans %}Go to
                         <a href="https://instagram.com/accounts/manage_access">https://instagram.com/accounts/manage_access</a>
                         and revoke access from "Instasavegram.com" application.
-                    </li>
-                    <li>Visit <a href="{{ app.request.schemeAndHttpHost }}">{{ app.request.schemeAndHttpHost }}</a>
+                        {% endtrans %}</li>
+                    <li>{% trans with { '%url%': app.request.schemeAndHttpHost } %}Visit <a href="%url%">%url%</a>
                         again and login with your new account.
-                    </li>
+                        {% endtrans %}</li>
                 </ol>
             </details>
+            {#<details>#}
+            {#<summary class="h4">{% trans %}I am waiting for hours now, where are my photos?{% endtrans %}</summary>#}
+            {##}
+            {#<p>#}
+            {#Sometimes not all export jobs come to a successful end. If you still see the spinning loading icon,#}
+            {#please click again on the green button, even if it says 'Please wait...'. This will start a new#}
+            {#export job.#}
+            {#</p>#}
+            {#</details>#}
             <details>
-                <summary class="h4">I am waiting for hours now, where are my photos?</summary>
+                <summary class="h4">{% trans %}What to do if I found a bug?{% endtrans %}</summary>
 
-                <p>
-                    Sometimes not all export jobs come to a successful end. If you still see the spinning loading icon,
-                    please click again on the green button, even if it says 'Please wait...'. This will start a new
-                    export job.
-                </p>
-            </details>
-
-            <details>
-                <summary class="h4">What to do if I found a bug?</summary>
-
-                <p>You can create an issue on
-                    <a href="https://github.com/naumovs/theid/issues?milestone=&page=1&state=open">github</a>
-                    or just use a contact form.
+                <p>{% trans %}
+                    You can create an issue on
+                    <a href="https://github.com/naumovs/instasavegram/issues">github</a> or
+                    just use a contact form.
+                    {% endtrans %}
                 </p>
             </details>
 
         </div>
     </div>
     <div class="content-after">
-            <h3>Still have a question? </h3>
+        <h3>{% trans %}Still have a question? {% endtrans %}</h3>
 
-            <p>Send us with a question via the <a href="{{ path('contact') }}">contact</a> form.</p>
+        <p>
+            {% trans with { '%url%': path('contact') } %}
+            Send us with a question via the <a href="%url%">contact</a> form.
+            {% endtrans %}
+        </p>
     </div>
 </div>

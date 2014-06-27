@@ -1,7 +1,8 @@
+{% trans_default_domain "app_home" %}
 {% extends app.request.isXmlHttpRequest() ? 'App::layout.ajax.html.twig' : 'App::layout.html.twig' %}
 
-{% block subtitle %}Save, Download, Backup your Instagram photos {% endblock %}
-{% block description %}instasavegram.com - an online tool to save all your Instagram photos to your PC, tablet and even phone. Save your Instagram images to your drive and share them via Facebook, Flickr or Google+.{% endblock %}
+{% block subtitle %}{% trans %}Save, Download, Backup your Instagram photos {% endtrans %}{% endblock %}
+{% block description %}{% trans %}instasavegram.com - an online tool to save all your Instagram photos to your PC, tablet and even phone. Save your Instagram images to your drive and share them via Facebook, Flickr or Google+.{% endtrans %}{% endblock %}
 
 {% block payload %}
     {% include 'App:Public:homepage.content.html.twig' %}

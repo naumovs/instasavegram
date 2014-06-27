@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.locale }}">
 <head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -44,9 +44,9 @@
 <body>
 <nav class="navigation cf" id="nav" role="navigation">
     <ul class="nav navbar-nav">
-        <li><a href="{{ path('contact') }}">contact</a></li>
-        <li><a href="{{ path('faq') }}">faq</a></li>
-        <li><a href="{{ path('homepage') }}">home</a></li>
+        <li><a href="{{ path('contact') }}">{% trans %}contact{% endtrans %}</a></li>
+        <li><a href="{{ path('faq') }}">{% trans %}faq{% endtrans %}</a></li>
+        <li><a href="{{ path('localized_homepage') }}">{% trans %}home{% endtrans %}</a></li>
     </ul>
 </nav>
 
@@ -62,19 +62,19 @@
 
     <div class="footer">
             <div class="footer-text">
-                <span class="footer-credits">created by
+                <span class="footer-locales">
+                    <a class="noscript" lang="en" href="{{ path('localized_homepage', { '_locale' : 'en'}) }}">English</a>
+                    <a class="noscript" lang="ru" href="{{ path('localized_homepage', { '_locale' : 'ru'}) }}">Русский</a>
+                </span>
+                <span class="footer-credits">{% trans %}created by
                     <a rel="author" href="https://plus.google.com/u/0/107278186993456908726?rel=author">@zlayatapka</a> and
                     <a rel="author" href="http://instagram.com/egonyan?rel=author">@egonyan</a>
+                    {% endtrans %}
                 </span>
             </div>
     </div>
 </div>
 
 <script type="text/javascript" src="{{ asset('js/app.js') }}" async></script>
-{% block javascripts %}
-{% endblock %}
-<script type="text/javascript">
-
-</script>
 </body>
 </html>

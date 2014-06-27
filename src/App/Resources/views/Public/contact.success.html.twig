@@ -1,6 +1,5 @@
+{% trans_default_domain "app_contact" %}
 {% extends 'App::layout.html.twig' %}
-
-{% block subtitle %}{% endblock %}
 
 {% block payload %}
     <div class="contact has-content clearfix">
@@ -8,21 +7,19 @@
 
         <div class="content-bg">
             <div class="content-wrap">
-                <h1>Thank you</h1>
+                <h1>{% trans %}Thank you{% endtrans %}</h1>
 
                 <p>
-                    Your response is very valuable for us, we will process this request and reply to you soon.
+                    {% trans %}Your feedback is very valuable for us, we will process this request and reply to you soon.{% endtrans %}
                 </p>
 
             </div>
         </div>
         <div class="content-after">
-            {#<div class="col-sm-8 col-sm-offset-2">#}
-            <h3>Experiencing an issue?</h3>
+            <h3>{% trans %}Experiencing an issue?{% endtrans %}</h3>
 
-            <p>It's better to create an issue on our <a href="https://github.com/naumovs/theid/issues">github</a> page.</p>
-            {#</div>#}
-        </d`iv>
+            <p>{% trans %}It's better to create an issue on our <a href="https://github.com/naumovs/instasavegram/issues">github</a> page.{% endtrans %}</p>
+        </div>
     </div>
 
 {% endblock %}

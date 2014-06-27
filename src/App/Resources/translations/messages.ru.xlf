@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="2f8a6bf31f3bd67bd2d9720c58b19c9a" resname="contact">
+        <source>contact</source>
+        <target>контакт</target>
+      </trans-unit>
+      <trans-unit id="da75cd652254fce37e953d7f261f132d" resname="faq">
+        <source>faq</source>
+        <target>чаво</target>
+      </trans-unit>
+      <trans-unit id="106a6c241b8797f52e1e77317b96a201" resname="home">
+        <source>home</source>
+        <target>главная</target>
+      </trans-unit>
+      <trans-unit id="f207cd9a7046ebae75fba3c6eab9b3e9" resname="created by">
+        <source>created by</source>
+        <target>сайт сделали</target>
+      </trans-unit>
+      <trans-unit id="4f773c5e4944d6984c925dfa585fc676" resname="created by&#10;                    &lt;a rel=&quot;author&quot; href=&quot;https://plus.google.com/u/0/107278186993456908726?rel=author&quot;&gt;@zlayatapka&lt;/a&gt; and&#10;                    &lt;a rel=&quot;author&quot; href=&quot;http://instagram.com/egonyan?rel=author&quot;&gt;@egonyan&lt;/a&gt;">
+        <source>created by
+                    &lt;a rel="author" href="https://plus.google.com/u/0/107278186993456908726?rel=author"&gt;@zlayatapka&lt;/a&gt; and
+                    &lt;a rel="author" href="http://instagram.com/egonyan?rel=author"&gt;@egonyan&lt;/a&gt;</source>
+        <target>сайт сделали
+                    &lt;a rel="author" href="https://plus.google.com/u/0/107278186993456908726?rel=author"&gt;@zlayatapka&lt;/a&gt; и
+                    &lt;a rel="author" href="http://instagram.com/egonyan?rel=author"&gt;@egonyan&lt;/a&gt;</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

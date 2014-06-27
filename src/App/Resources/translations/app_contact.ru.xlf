@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="bbaff12800505b22a853e8b7f4eb6a22" resname="Contact">
+        <source>Contact</source>
+        <target>Контакт</target>
+      </trans-unit>
+      <trans-unit id="723eb2eab5aa9306959da2b7c47db839" resname="Please fill in following form and we will reply to you as soon as possible.">
+        <source>Please fill in following form and we will reply to you as soon as possible.</source>
+        <target>Заполни форму ниже и мы постараемся ответить как можно скорее.</target>
+      </trans-unit>
+      <trans-unit id="49ee3087348e8d44e1feda1917443987" resname="Name">
+        <source>Name</source>
+        <target>Имя</target>
+      </trans-unit>
+      <trans-unit id="ce8ae9da5b7cd6c3df2929543a9af92d" resname="Email">
+        <source>Email</source>
+        <target>Эл. Почта</target>
+      </trans-unit>
+      <trans-unit id="9dffbf69ffba8bc38bc4e01abf4b1675" resname="Text">
+        <source>Text</source>
+        <target>Текст</target>
+      </trans-unit>
+      <trans-unit id="e79d6b2bfd17dd63673ad0c5b2e5069f" resname="Experiencing an issue?">
+        <source>Experiencing an issue?</source>
+        <target>Нашел ошибку?</target>
+      </trans-unit>
+      <trans-unit id="fc3f73c7d2c2d1e7de28d77f45612394" resname="It's better to create an issue on our &lt;a href=&quot;https://github.com/naumovs/instasavegram/issues&quot;&gt;github&lt;/a&gt; page.">
+        <source>It's better to create an issue on our &lt;a href="https://github.com/naumovs/instasavegram/issues"&gt;github&lt;/a&gt; page.</source>
+        <target>Лушче перейди по ссылке &lt;a href="https://github.com/naumovs/instasavegram/issues"&gt;github&lt;/a&gt; и создай баг-репорт.</target>
+      </trans-unit>
+      <trans-unit id="53e38d5ce570bffce79825adff1f4081" resname="In case you have a question or suggestion, please fill in following form and we will reply to you as soon as possible.">
+        <source>In case you have a question or suggestion, please fill in following form and we will reply to you as soon as possible.</source>
+        <target>Есть вопросы или предложения? Заполни форму и мы постараемся ответить как можно быстрее.</target>
+      </trans-unit>
+      <trans-unit id="7a7c46aab7e07559c6f7a8b25f2b9ef4" resname="Thank you">
+        <source>Thank you</source>
+        <target>Спасибо</target>
+      </trans-unit>
+      <trans-unit id="051806eec46ec18efbe54094c04e94ea" resname="Your feedback is very valuable for us, we will process this request and reply to you soon.">
+        <source>Your feedback is very valuable for us, we will process this request and reply to you soon.</source>
+        <target>Нам важен каждый отзыв, в том числе и твой. Мы ответим на него как только обработаем.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

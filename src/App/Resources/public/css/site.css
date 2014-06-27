@@ -860,16 +860,16 @@ a {
   .footer .footer-text {
     color: white;
     max-width: 1020px;
-    min-width: 1020px;
     margin: 0 auto;
     font-size: 12px;
-    text-align: right;
     text-decoration: none; }
     .footer .footer-text a {
       color: white; }
       .footer .footer-text a:hover {
         color: #d5ecb6; }
   .footer .footer-credits {
+    display: block;
+    float: right;
     text-align: right; }
     .footer .footer-credits a {
       color: blanchedalmond;
