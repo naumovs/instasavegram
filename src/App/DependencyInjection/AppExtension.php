@@ -27,5 +27,6 @@ class AppExtension extends Extension
 
 		$container->setParameter('app-instagram-client-id', $config['instagram_client_id']);
 		$container->setParameter('app-ga-tracking', $config['ga_tracking']);
+		$container->setParameter('app-ym-tracking', $config['ym_tracking']);
     }
 }

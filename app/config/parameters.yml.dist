@@ -20,3 +20,4 @@ parameters:
 
     instagram_client_id:    ~
     ga_tracking:            ~
+    ym_tracking:            ~

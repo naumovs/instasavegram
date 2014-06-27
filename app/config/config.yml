@@ -81,3 +81,4 @@ sensio_framework_extra:
 
 app:
   instagram-client-id: "%instagram_client_id%"
+  ym_tracking:         "%ym_tracking%"

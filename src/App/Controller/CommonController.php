@@ -36,7 +36,8 @@ class CommonController extends AbstractController
 				'debug' => $this->container->getParameter('kernel.debug'),
 				'base-url' => $request->getBaseUrl() . '/',
 				'instagram-client-id' => $this->container->getParameter('app-instagram-client-id'),
-				'locale' => $request->getLocale()
+				'locale' => $request->getLocale(),
+				'app-ym-tracking' => $this->container->getParameter('app-ym-tracking')
 			)), $response);
 	}
 
